@@ -1,5 +1,40 @@
 // colours
+$white: #FFF;
+$white15pc: rgba(255,255,255,0.15);
+$white25pc: rgba(255,255,255,0.25);
+$white35pc: rgba(255,255,255,0.35);
+$white45pc: rgba(255,255,255,0.45);
+$black: #000;
+$black15pc: rgba(0,0,0,0.15);
+$black25pc: rgba(0,0,0,0.25);
+$darkGray: #242222;
+$mediumGray: #59524c;
+$lightGray: #707070;
+$khaki: #96855e;
+
 
 // breakpoints
 $MobileMaxWidth: 767px;
 $TabletMaxWidth: 1023px;
+
+// padding
+$bodyPadding1: 0em;
+$bodyPadding2: 0.5em;
+$bodyPadding3: 1em;
+$bodyPadding4: 1.5em;
+$bodyPadding5: 2em;
+$bodyPadding6: 2.5em;
+$bodyPadding7: 3em;
+$bodyPadding8: 3.5em;
+$bodyPadding9: 4em;
+$bodyPadding10: 4.5em;
+
+// font sizes
+$fontBodyMobile: 14px;
+$fontBodyTablet: 16px;
+$fontBodyDesktop: 16px;
+
+// font families
+$fontFamilyBody: 'Akkurat', sans-serif;
+$fontFamilyHeading1: 'TradeGothicLTStd-BoldExt', sans-serif;
+$fontFamilyHeading2: 'Cochin-Bold', sans-serif;
