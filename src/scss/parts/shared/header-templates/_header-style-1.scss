@@ -1,22 +1,78 @@
 header#header-style-1 {
+  background-color: $darkGray;
+
   .torque-header-content-wrapper {
+    display: flex;
 
-    .torque-header-burger-menu-wrapper {
-      @include respond-to(desktop) {
-        display: none;
+    .torque-header-left-area-wrapper {
+      flex: 1;
+      padding-left: $bodyPadding4;
+    }
+
+    .torque-header-right-area-wrapper {
+      display: flex;
+      flex: 2;
+      
+      .cta-menu-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex: 5;
+
+        .cta-menu-item {
+          font-family: $fontFamilyHeading1;
+          font-size: 1em;
+          text-transform: uppercase;
+          color: $white;
+          
+          @include respond-to(tablet) {
+            font-size: 0.875em;
+          }
+
+          @include respond-to(desktop) {
+            font-size: 0.875em;
+          }
+
+          &:not(:first-child) {
+            margin-left: $bodyPadding5;
+          }
+        }
+      }
+      
+      .burger-menu-container {
+        position: relative;
+        flex: 1;
+
+
+        .torque-burger-menu {
+          position: absolute;
+          right: $bodyPadding4;
+          top: 50%;
+          transform: translateY(-50%);
+
+          .torque-burger-menu-line {
+            background-color: $white;
+          }
+        }
       }
     }
 
-    .torque-header-menu-items-inline-wrapper {
-      @include respond-to-max(desktop) {
-        display: none;
-      }
-    }
+    // .torque-header-burger-menu-wrapper {
+    //   @include respond-to(desktop) {
+    //     display: none;
+    //   }
+    // }
+
+    // .torque-header-menu-items-inline-wrapper {
+    //   @include respond-to-max(desktop) {
+    //     display: none;
+    //   }
+    // }
   }
 
-  .torque-header-menu-items-mobile {
-    @include respond-to(desktop) {
-      display: none;
-    }
-  }
+  // .torque-header-menu-items-mobile {
+  //   @include respond-to(desktop) {
+  //     display: none;
+  //   }
+  // }
 }
