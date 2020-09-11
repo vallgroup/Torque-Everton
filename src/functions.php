@@ -37,7 +37,50 @@ if ( class_exists( 'Everton_Customizer' ) ) {
    new Everton_ACF();
  }
 
-
+ /**
+  * Child Theme ACF
+  */
+ 
+ if ( class_exists( 'The_Venn_ACF' ) ) {
+   new The_Venn_ACF();
+ }
+ 
+ 
+ /**
+  * Map plugin settings
+  */
+ 
+//  add_filter( 'torque_map_api_key', function( $n ) {
+//    return get_field( 'google_maps_api_key', 'options' )
+//      ? get_field( 'google_maps_api_key', 'options' )
+//      : '';
+//  } );
+ 
+//  add_filter( 'torque_map_pois_allowed', function( $n ) {
+//    return 5;
+//  } );
+ 
+//  // add_filter( 'torque_map_manual_pois', function( $n ) {
+//  //   return true;
+//  // } );
+ 
+//  add_filter( 'torque_map_pois_location', function( $n ) {
+//    return 'middle';
+//  } );
+ 
+//  add_filter( 'torque_map_display_pois_list', function( $n ) {
+//    return true;
+//  } );
+ 
+ 
+ /**
+  * Jetpack filters, for local/staging use
+  */
+ // Hook into Jetpack's form redirect filter when WP loads, without instantiating the entire class
+//  Torque_Jetpack_Form::register_redirect_filter();
+ 
+ // add_filter( 'jetpack_development_mode', '__return_true' );
+//  add_filter( 'jetpack_is_staging_site', '__return_true' );
 
 
 /**
