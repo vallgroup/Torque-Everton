@@ -3,24 +3,24 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
 
-  padding: $bodyPadding1;
   box-sizing: border-box;
+  padding: $bodyPadding5 $bodyPadding1;
 
   background-color: $mediumGray;
 
   @include respond-to(tablet) {
-    padding: $bodyPadding1 $bodyPadding3;
+    padding: $bodyPadding5 $bodyPadding1;
   }
 
   @include respond-to(desktop) {
-    padding: $bodyPadding1;
+    padding: $bodyPadding12 $bodyPadding1 $bodyPadding10;
   }
 
   .footer-block {
-    padding-top: $bodyPadding1;
-    padding-bottom: $bodyPadding1;
+    // padding: $bodyPadding1 $bodyPadding2;
     width: 100%;
     text-align: center;
+    opacity: 0.62;
 
     @include respond-to(tablet) {
       flex: 1 1 50%;
@@ -28,22 +28,29 @@ footer {
     }
 
     @include respond-to(desktop) {
-      flex-basis: 25%;
-      padding-top: $bodyPadding1;
-      padding-bottom: 0;
+      width: auto;
+      
+      &.footer-block-one {
+        flex: 1 1 40%;
+      }
+      &.footer-block-two,
+      &.footer-block-three,
+      &.footer-block-four
+      {
+        flex: 1 1 20%;
+      }
     }
 
     &.footer-block-one {
-      flex-basis: 30%;
+      text-align: center;
+
+      .torque-logo {
+        width: 213px;
+        height: auto;
+      }
     }
-    &.footer-block-two {
-      flex-basis: 23.33%;
-    }
-    &.footer-block-three {
-      flex-basis: 23.33%;
-    }
-    &.footer-block-four {
-      flex-basis: 23.33%;
-    }
+    // &.footer-block-two {}
+    // &.footer-block-three {}
+    // &.footer-block-four {}
   }
 }

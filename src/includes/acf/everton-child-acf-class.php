@@ -108,6 +108,69 @@ class Everton_ACF {
             'append' => '',
           ),
           array(
+            'key' => 'field_5f5e9af6d42dd',
+            'label' => 'Social Channels',
+            'name' => 'social_channels',
+            'type' => 'repeater',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+              'width' => '',
+              'class' => '',
+              'id' => '',
+            ),
+            'collapsed' => '',
+            'min' => 0,
+            'max' => 0,
+            'layout' => 'table',
+            'button_label' => 'Add Social Channel',
+            'sub_fields' => array(
+              array(
+                'key' => 'field_5f5e9b5e52608',
+                'label' => 'Icon',
+                'name' => 'icon',
+                'type' => 'select',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                  'width' => '',
+                  'class' => '',
+                  'id' => '',
+                ),
+                'choices' => array(
+                  'fa-facebook' => 'Facebook',
+                  'fa-instagram' => 'Instagram',
+                ),
+                'default_value' => array(
+                ),
+                'allow_null' => 0,
+                'multiple' => 0,
+                'ui' => 0,
+                'return_format' => 'value',
+                'ajax' => 0,
+                'placeholder' => '',
+              ),
+              array(
+                'key' => 'field_5f5e9af6d42de',
+                'label' => 'URL',
+                'name' => 'url',
+                'type' => 'url',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                  'width' => '',
+                  'class' => '',
+                  'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+              ),
+            ),
+          ),
+          array(
             'key' => 'field_5f5c2460770e9',
             'label' => 'Header',
             'name' => '',
@@ -368,7 +431,7 @@ class Everton_ACF {
         'description' => '',
       ));
       
-    endif;
+      endif;
   }
 }
 
