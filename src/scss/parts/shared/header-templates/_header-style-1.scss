@@ -1,5 +1,7 @@
 header#header-style-1 {
+  position: relative;
   background-color: $darkGray;
+  border-bottom: 1px solid $khaki;
 
   .torque-header-content-wrapper {
     display: flex;
@@ -24,6 +26,8 @@ header#header-style-1 {
           font-size: 1em;
           text-transform: uppercase;
           color: $white;
+          letter-spacing: $letterSpacing3;
+          line-height: $lineHeight2;
           
           @include respond-to(tablet) {
             font-size: 0.875em;
@@ -50,29 +54,99 @@ header#header-style-1 {
           top: 50%;
           transform: translateY(-50%);
 
+          padding: $bodyPadding3;
+
+          cursor: pointer;
+
           .torque-burger-menu-line {
             background-color: $white;
+            top: calc(1em + 7px);
+
+            &:first-child {
+              top: 1em;
+            }
+
+            &:last-child {
+              top: calc(1em + 14px);
+            }
+          }
+
+          &.active {
+            .torque-burger-menu-line {
+              &:last-child {
+                top: calc(1em + 7px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .torque-header-menu-items-mobile {
+    position: absolute;
+    top: calc(100% + 1px);
+    right: -100%;
+    left: unset;
+    width: auto;
+    background-color: $darkGray92pc;
+    z-index: 100;
+
+    &.active {
+      right: 0%;
+    }
+
+    .torque-menu-items-stacked {
+      padding: 90px 52px 40px 145px;
+
+      .torque-menu-item-wrapper  {
+        width: 252px;
+        padding: 10px 0;
+        border-bottom: 1px solid $khaki;
+        text-align: right;
+
+        .torque-menu-item {
+          font-family: $fontFamilyBody;
+          font-size: 1em;
+          text-transform: uppercase;
+          color: $white;
+          letter-spacing: $letterSpacing3;
+          line-height: $lineHeight2;
+          
+          @include respond-to(tablet) {
+            font-size: 0.875em;
+          }
+  
+          @include respond-to(desktop) {
+            font-size: 0.875em;
           }
         }
       }
     }
 
-    // .torque-header-burger-menu-wrapper {
-    //   @include respond-to(desktop) {
-    //     display: none;
-    //   }
-    // }
+    .drawer-contact-container {
+      padding: 0px 52px 40px 145px;
+      text-align: right;
 
-    // .torque-header-menu-items-inline-wrapper {
-    //   @include respond-to-max(desktop) {
-    //     display: none;
-    //   }
-    // }
+      &>* {
+        font-family: $fontFamilyBody;
+        font-size: 1em;
+        color: $white;
+        letter-spacing: $letterSpacing3;
+        line-height: $lineHeight2;
+      }
+
+      .drawer-contact-address {
+        margin-bottom: 10px;
+      }
+    }
+
+    .drawer-cta {
+      text-align: right;
+
+      .btn-primary {
+        margin: 0px 52px 40px auto;
+      }
+    }
   }
-
-  // .torque-header-menu-items-mobile {
-  //   @include respond-to(desktop) {
-  //     display: none;
-  //   }
-  // }
 }

@@ -1,0 +1,13 @@
+.page-hero {
+  position: relative;
+
+  @include useHeaderHeight(margin-top, false);
+
+  .type-image {
+    @extend %imageSize;
+
+    .hero-image {
+      @extend %imageInner;
+    }
+  }
+}
