@@ -6,13 +6,34 @@ body {
   line-height: $lineHeight3;
 }
 
-// h1 {}
+h1 {
+  font-family: $fontFamilyHeading1;
+  font-size: 2.6875em; // 43px
+  line-height: $lineHeight5;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
-// h2 {}
+h2 {
+  font-family: $fontFamilyHeading2;
+  font-size: 1.875em; // 30px
+  line-height: $lineHeight6;
+  text-transform: capitalize;
+  margin-top: 0;
+  margin-bottom: $bodyPadding2;
+}
 
 // h3 {}
 
 // h4 {}
+
+p {
+  font-family: $fontFamilyBody;
+  font-size: 1em; // 16px
+  line-height: $lineHeight4;
+  letter-spacing: $letterSpacing4;
+}
 
 // a {}
 

@@ -7,6 +7,7 @@ footer {
   padding: $bodyPadding5 $bodyPadding1;
 
   background-color: $mediumGray;
+  border-top: 3px solid $khaki;
 
   @include respond-to(tablet) {
     padding: $bodyPadding5 $bodyPadding1;
@@ -17,7 +18,6 @@ footer {
   }
 
   .footer-block {
-    // padding: $bodyPadding1 $bodyPadding2;
     width: 100%;
     text-align: center;
     opacity: 0.62;
@@ -49,8 +49,14 @@ footer {
         height: auto;
       }
     }
-    // &.footer-block-two {}
-    // &.footer-block-three {}
-    // &.footer-block-four {}
+    &.footer-block-two {
+      padding-top: $bodyPadding7;
+    }
+    &.footer-block-three {
+      padding-top: $bodyPadding7;
+    }
+    &.footer-block-four {
+      padding-top: $bodyPadding7;
+    }
   }
 }

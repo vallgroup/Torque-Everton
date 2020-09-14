@@ -1,0 +1,46 @@
+#tq-cta-banner {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+
+  .cta-banner-col-left {
+    // position: relative;
+    flex: 1 1 20%;
+
+    .cta-banner-title {
+      display: inline-block;
+      position: absolute;
+      bottom: 45%;
+      left: 15%;
+      transform: rotate(-90deg) translateX(-50%);
+      transform-origin: left;
+    }
+  }
+  
+  .cta-banner-col-right {
+    position: relative;
+    flex: 1 1 80%;
+
+    border-left: 3px solid $khaki;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @extend %imageSize;
+  }
+
+  .cta-banner-button {
+    position: absolute;
+    bottom: -35px;
+    left: 20%;
+
+    .btn-primary {
+      transform: translateX(-50%);
+      padding: 22px 81px;
+    }
+  }
+}
