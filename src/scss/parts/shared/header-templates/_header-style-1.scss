@@ -142,10 +142,12 @@ header#header-style-1 {
     }
 
     .drawer-cta {
+      position: relative;
+      margin-bottom: 40px;
       text-align: right;
 
       .btn-primary {
-        margin: 0px 52px 40px auto;
+        margin: 0px 52px 0 auto;
       }
     }
   }

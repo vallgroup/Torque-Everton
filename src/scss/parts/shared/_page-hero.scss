@@ -5,6 +5,10 @@
 
   .type-image {
     @extend %imageSize;
+    
+    &.slimline {
+      @extend %imageSizeHalf;
+    }
 
     .hero-image {
       @extend %imageInner;

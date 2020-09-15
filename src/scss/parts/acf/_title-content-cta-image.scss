@@ -1,8 +1,7 @@
 #tq-title-content-cta-image {
   position: relative;
   box-sizing: border-box;
-  width: 100%;
-  padding: $bodyPadding6 $bodyPadding6;
+  // padding: $bodyPadding6 $bodyPadding6;
 
   display: flex;
   flex-direction: row;
@@ -18,20 +17,19 @@
     justify-content: center;
 
     .title-content-cta-image-title {
-      margin-left: 10%;
-      margin-right: 15%;
+      @extend %contentWithAdjacentImageMargins;
     }
 
     .title-content-cta-image-content {
-      margin-left: 10%;
-      margin-right: 15%;
+      @extend %contentWithAdjacentImageMargins;
     }
 
     .title-content-cta-image-button {
+      position: relative;
       margin-top: $bodyPadding8;
+
       .btn-primary {
-        margin-left: 10%;
-        margin-right: 15%;
+        @extend %contentWithAdjacentImageMargins;
       }
     }
   }

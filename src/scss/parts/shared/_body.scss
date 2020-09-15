@@ -2,3 +2,10 @@ body {
   background-color: $darkGray;
   color: $white;
 }
+
+.limit-width {
+  width: calc(100% - #{$bodyPadding13});
+  max-width: $contentWidthLimit;
+  margin-left: $bodyPadding7;
+  margin-right: $bodyPadding7;
+}

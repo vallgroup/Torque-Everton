@@ -12,10 +12,14 @@ $darkGray92pc: rgba(36,34,34, 0.92);
 $mediumGray: #59524c;
 $lightGray: #707070;
 $khaki: #96855e;
+$khaki20pc: rgba(150,133,94,0.2);
 
 // breakpoints
 $MobileMaxWidth: 767px;
 $TabletMaxWidth: 1023px;
+
+// content widths
+$contentWidthLimit: 1282px;
 
 // padding
 $bodyPadding1: 0em;

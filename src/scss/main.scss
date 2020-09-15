@@ -20,9 +20,14 @@
 @import 'parts/shared/buttons';
 @import 'parts/shared/socials';
 
+// elements
+@import 'parts/elements/offset-hr';
+
 // acf
 @import 'parts/acf/content-spacer';
 @import 'parts/acf/title-content-cta-image';
+@import 'parts/acf/title-content';
+@import 'parts/acf/two-column-content';
 @import 'parts/acf/cta-banner';
 
 // footer

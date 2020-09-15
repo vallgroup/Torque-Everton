@@ -6,21 +6,30 @@
 $bg_image_url = $image && isset( $image['url'] ) 
   ? $image['url'] 
   : '';
+
+$alignment_class = 'align-' . $alignment;
+$image_cover_class = $contain_image ? 'contain-image' : '';
+$image_offset_class = $offset_image ? 'offset-image' : '';
 ?>
 
-<section id="tq-cta-banner">
-  <div class="cta-banner-col-left">
-    <?php if ( $title ) { ?>
-      <h1 class="cta-banner-title">
-        <?php echo $title; ?>
-      </h1>
-    <?php } ?>
-  </div>
+<section 
+  id="tq-cta-banner"
+  class="<?php echo $alignment_class; ?>"
+>
+  <div class="cta-banner-col-left"></div>
   
-  <div 
-    class="cta-banner-col-right"
-    style="background-image: url(<?php echo $bg_image_url; ?>);"
-  ></div>
+  <div class="cta-banner-col-right
+    <?php echo $image_cover_class; ?>
+    <?php echo $image_offset_class; ?>
+  ">
+    <img src="<?php echo $bg_image_url; ?>" />
+  </div>
+
+  <?php if ( $title ) { ?>
+    <h1 class="cta-banner-title">
+      <?php echo $title; ?>
+    </h1>
+  <?php } ?>
 
   <?php if ( $button ) { ?>
     <div class="cta-banner-button">

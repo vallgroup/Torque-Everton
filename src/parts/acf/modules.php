@@ -4,7 +4,7 @@ $modules = 'content_modules';
 $modules_path = '/parts/acf/modules/';
 
 // allowable tags
-$allowable_title_tags = '<i><b><em><strong>';
+$allowable_title_tags = '<i><b><em><strong><br>';
 $allowable_tagline_tags = '<blockquote><a><ul><ol><li><i><b><em><strong><p><br><table><tbody><thead><td><tr>';
 $allowable_content_tags = '<blockquote><a><ul><ol><li><i><b><em><strong><p><br><table><tbody><thead><td><tr><img>';
 
@@ -28,6 +28,9 @@ if ( have_rows( $modules ) ) :
       case 'cta_banner' :
 
         // CTA Banner
+        $alignment = get_sub_field( 'alignment' );
+        $contain_image = get_sub_field( 'contain_image' );
+        $offset_image = get_sub_field( 'offset_image' );
         $title = strip_tags( get_sub_field( 'title' ), $allowable_title_tags );
         $image = get_sub_field( 'image' );
         $button = get_sub_field( 'button' );
@@ -46,6 +49,27 @@ if ( have_rows( $modules ) ) :
         $image = get_sub_field( 'image' );
 
         include locate_template( $modules_path . 'title-content-cta-image.php' );
+
+        break;
+
+      case 'title_content' :
+
+        // Title, Content
+        $title = strip_tags( get_sub_field( 'title' ), $allowable_title_tags );
+        $content = strip_tags( get_sub_field( 'content'), $allowable_content_tags );
+        $bottom_border = get_sub_field( 'bottom_border' );
+        
+        include locate_template( $modules_path . 'title-content.php' );
+
+        break;
+
+      case 'two_column_content' :
+
+        // Two Column Content
+        $col_one = strip_tags( get_sub_field( 'column_one' ), $allowable_content_tags );
+        $col_two = strip_tags( get_sub_field( 'column_two' ), $allowable_content_tags );
+        
+        include locate_template( $modules_path . 'two-column-content.php' );
 
         break;
 

@@ -12,7 +12,7 @@ $alignment_class = 'align-' . $alignment;
 
 <section 
   id="tq-title-content-cta-image"
-  class="<?php echo $alignment_class; ?>"
+  class="limit-width <?php echo $alignment_class; ?>"
 >
   <div class="title-content-cta-image-col-left">
     <?php if ( $title ) { ?>
@@ -29,7 +29,7 @@ $alignment_class = 'align-' . $alignment;
 
     <?php if ( $button ) { ?>
       <div class="title-content-cta-image-button">
-        <div class="offset-hr"></div>
+        <?php get_template_part( 'parts/elements/offset-hr' ); ?>
         <a 
           class="btn-primary"
           href="<?php echo $button['url']; ?>"

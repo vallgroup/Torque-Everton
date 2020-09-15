@@ -56,7 +56,7 @@ $call_to_action = get_field( 'drawer_menu_cta', 'options' );
       <?php get_template_part( 'parts/shared/phone' ); ?>
     </div>
     <div class="drawer-cta">
-      <div class="offset-hr"></div>
+      <?php get_template_part( 'parts/elements/offset-hr' ); ?>
       <a class="btn-primary slim" 
         href="<?php echo $call_to_action['url']; ?>"
         target="<?php echo $call_to_action['target']; ?>"

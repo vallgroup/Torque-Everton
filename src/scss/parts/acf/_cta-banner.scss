@@ -6,18 +6,40 @@
   display: flex;
   flex-direction: row;
 
-  .cta-banner-col-left {
-    // position: relative;
-    flex: 1 1 20%;
+  border-bottom: 3px solid $khaki;
 
-    .cta-banner-title {
-      display: inline-block;
-      position: absolute;
-      bottom: 45%;
-      left: 15%;
-      transform: rotate(-90deg) translateX(-50%);
-      transform-origin: left;
+  // Right-aligned content, left image
+  &.align-right {
+    flex-direction: row-reverse;
+
+    // .cta-banner-col-left {}
+
+    .cta-banner-col-right {
+      border-left: 0;
+      border-right: 3px solid $khaki;
     }
+
+    // TODO: align correctly/responsively
+    .cta-banner-title {
+      bottom: 5%;
+      left: unset;
+      right: -2vw;
+      transform: rotate(-90deg);
+    }
+
+    .cta-banner-button {
+      left: unset;
+      right: 20%;
+
+      .btn-primary {
+        transform: translateX(50%);
+      }
+    }
+  }
+
+  // Left-aligned content, right image
+  .cta-banner-col-left {
+    flex: 1 1 20%;
   }
   
   .cta-banner-col-right {
@@ -30,7 +52,47 @@
     background-position: center;
     background-repeat: no-repeat;
 
+    overflow: hidden;
+
     @extend %imageSize;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    &.contain-image {
+      overflow: visible;
+
+      img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        max-height: 90%;
+        max-width: 100%;
+        height: auto;
+        width: auto;
+      }
+    }
+    &.offset-image {
+      // ACF conditional means that the image can only be offset when it is also set to contained
+      img {
+        top: $bodyPadding10;
+      }
+    }
+  }
+
+  // TODO: align correctly/responsively
+  .cta-banner-title {
+    position: absolute;
+    bottom: 45%;
+    left: 15%;
+    transform: 
+      rotate(-90deg)
+      translateX(-50%)
+      translateY(-50%);
+    transform-origin: left;
   }
 
   .cta-banner-button {

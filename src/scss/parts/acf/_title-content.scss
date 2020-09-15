@@ -1,0 +1,21 @@
+#tq-title-content {
+  position: relative;
+  box-sizing: border-box;
+  padding: $bodyPadding6 $bodyPadding6;
+
+  display: flex;
+  flex-direction: column;
+
+  &.bottom-border {
+    border-bottom: 3px solid $khaki;
+  }
+
+  .title-content-title {
+    @extend %titleAndContentMargins;
+  }
+
+  .title-content-content {
+    max-width: 55%;
+    @extend %titleAndContentMargins;
+  }
+}
