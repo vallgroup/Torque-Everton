@@ -131,6 +131,7 @@ function torque_enqueue_child_styles() {
     );
 
     // enqueue featherlight style
+  // https://github.com/noelboss/featherlight/
     wp_enqueue_style( 'featherlight-styles',
         get_stylesheet_directory_uri() . '/libraries/featherlight/release/featherlight.min.css',
         false,
@@ -149,8 +150,9 @@ function torque_enqueue_child_scripts() {
       wp_get_theme()->get('Version'),
       true       // put it in the footer
   );
-
+  
   // enqueue featherlight scripts
+  // https://github.com/noelboss/featherlight/
   wp_enqueue_script( 'featherlight-script',
       get_stylesheet_directory_uri() . '/libraries/featherlight/release/featherlight.min.js',
       array( 'jquery' ), // depends on parent script

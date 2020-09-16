@@ -85,6 +85,15 @@ if ( have_rows( $modules ) ) :
 
         break;
 
+      case 'gallery' :
+
+        // Filtered Gallery
+        $filtered_gallery_id = get_sub_field( 'gallery' );
+
+        include locate_template( $modules_path . 'filtered-gallery.php' );
+
+        break;
+
       // // Title, Tagline, Content, CTA & Graphic
       // case 'content_module_one' :
 
@@ -235,16 +244,6 @@ if ( have_rows( $modules ) ) :
       //   $phone = strip_tags( get_sub_field( 'phone') );
 
       //   include locate_template( $modules_path . 'content-module-seven.php' );
-
-      //   break;
-
-      // // Filtered Gallery
-      // case 'content_module_eight' :
-
-      //   // data
-      //   $filtered_gallery_id = get_sub_field( 'filtered_gallery' );
-
-      //   include locate_template( $modules_path . 'content-module-eight.php' );
 
       //   break;
 
