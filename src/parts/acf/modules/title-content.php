@@ -8,7 +8,7 @@ $bottom_border_class = $bottom_border ? 'bottom-border' : '';
 
 <section 
   id="tq-title-content"
-  class="limit-width <?php echo $bottom_border_class; ?>"
+  class="limit-width narrow <?php echo $bottom_border_class; ?>"
 >
   <?php if ( $title ) { ?>
     <h1 class="title-content-title">

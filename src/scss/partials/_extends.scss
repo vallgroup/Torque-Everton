@@ -44,6 +44,21 @@
   }
 }
 
+%imageSizeDouble {
+  position: relative;
+  padding-bottom: 95%;
+  width: 100%;
+  height: 0;
+
+  @include respond-to(tablet) {
+    padding-bottom: 80%;
+  }
+
+  @include respond-to(desktop) {
+    padding-bottom: 70%;
+  }
+}
+
 %imageInner {
   position: absolute;
   top: 0;

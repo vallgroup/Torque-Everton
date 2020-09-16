@@ -6,6 +6,10 @@ body {
 .limit-width {
   width: calc(100% - #{$bodyPadding13});
   max-width: $contentWidthLimit;
-  margin-left: $bodyPadding7;
-  margin-right: $bodyPadding7;
+  margin-left: auto;
+  margin-right: auto;
+
+  &.narrow {
+    width: calc(100% - (#{$bodyPadding13} + #{$bodyPadding13}));
+  }
 }

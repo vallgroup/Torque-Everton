@@ -73,6 +73,18 @@ if ( have_rows( $modules ) ) :
 
         break;
 
+      case 'two_images_w_captions' :
+
+        // Two Images with Captions
+        $img_one = get_sub_field( 'image_one' );
+        $img_two = get_sub_field( 'image_two' );
+        $caption_one = strip_tags( get_sub_field( 'caption_one' ), $allowable_title_tags );
+        $caption_two = strip_tags( get_sub_field( 'caption_two' ), $allowable_title_tags );
+        
+        include locate_template( $modules_path . 'two-images-w-captions.php' );
+
+        break;
+
       // // Title, Tagline, Content, CTA & Graphic
       // case 'content_module_one' :
 
