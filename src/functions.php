@@ -129,14 +129,6 @@ function torque_enqueue_child_styles() {
         array( $parent_style, $parent_main_style ),
         wp_get_theme()->get('Version')
     );
-
-    // enqueue featherlight style
-  // https://github.com/noelboss/featherlight/
-    wp_enqueue_style( 'featherlight-styles',
-        get_stylesheet_directory_uri() . '/libraries/featherlight/release/featherlight.min.css',
-        false,
-        wp_get_theme()->get('Version')
-    );
 }
 
 // enqueue child scripts after parent script
@@ -147,15 +139,6 @@ function torque_enqueue_child_scripts() {
   wp_enqueue_script( 'everton-child-script',
       get_stylesheet_directory_uri() . '/bundles/bundle.js',
       array( 'torque-theme-scripts' ), // depends on parent script
-      wp_get_theme()->get('Version'),
-      true       // put it in the footer
-  );
-  
-  // enqueue featherlight scripts
-  // https://github.com/noelboss/featherlight/
-  wp_enqueue_script( 'featherlight-script',
-      get_stylesheet_directory_uri() . '/libraries/featherlight/release/featherlight.min.js',
-      array( 'jquery' ), // depends on parent script
       wp_get_theme()->get('Version'),
       true       // put it in the footer
   );

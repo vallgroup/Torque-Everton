@@ -73,24 +73,21 @@ if ( have_rows( $modules ) ) :
 
         break;
 
-      case 'two_images_w_captions' :
-
-        // Two Images with Captions
-        $img_one = get_sub_field( 'image_one' );
-        $img_two = get_sub_field( 'image_two' );
-        $caption_one = strip_tags( get_sub_field( 'caption_one' ), $allowable_title_tags );
-        $caption_two = strip_tags( get_sub_field( 'caption_two' ), $allowable_title_tags );
-        
-        include locate_template( $modules_path . 'two-images-w-captions.php' );
-
-        break;
-
       case 'gallery' :
 
         // Filtered Gallery
         $filtered_gallery_id = get_sub_field( 'gallery' );
 
         include locate_template( $modules_path . 'filtered-gallery.php' );
+
+        break;
+
+      case 'gallery_w_captions' :
+
+        // Filtered Gallery
+        $filtered_gallery_w_captions_id = get_sub_field( 'gallery_w_captions' );
+
+        include locate_template( $modules_path . 'filtered-gallery-w-captions.php' );
 
         break;
 
