@@ -6,20 +6,7 @@
   padding: $bodyPadding6 0;
 
   .torque-acf-tabs-filters {
-    margin-bottom: $bodyPadding3;
-
-    button {
-      background-color: #ebebeb;
-      border: 0;
-      border-radius: 8px;
-      padding: 8px 12px;
-      margin: 0 5px 8px;
-
-      &.active {
-        color: $white;
-        background-color: #96d6ce;
-      }
-    }
+    @extend %filteredLoopFilters;
   }
 
   .images-wrapper {
@@ -56,7 +43,7 @@
 
           .featured-image {
             position: absolute;
-            
+
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -93,6 +80,6 @@
 #SRLLightbox {
   .SRLElementContainer {
     width: 85vw;
-    height: 85vh;
+    height: 80vh; // lesser height, because of captions container
   }
 }

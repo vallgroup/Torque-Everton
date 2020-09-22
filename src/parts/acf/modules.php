@@ -16,12 +16,23 @@ if ( have_rows( $modules ) ) :
 
       case 'content_spacer' :
 
-        // options
+        // Content Spacer
         $spacer_height = get_sub_field( 'spacer_height' );
         $spacer_measurement = get_sub_field( 'spacer_measurement' );
         $visibility = get_sub_field( 'visibility' );
 
         include locate_template( $modules_path . 'content-spacer.php' );
+
+        break;
+
+      case 'content_anchor' :
+
+        // Content Anchor
+        $anchor = get_sub_field( 'anchor' );
+        $anchor = str_replace('#', '', $anchor); // remove '#'
+        $anchor = str_replace(' ', '-', $anchor); // replace ' ' with '-'
+
+        include locate_template( $modules_path . 'content-anchor.php' );
 
         break;
 
@@ -54,7 +65,7 @@ if ( have_rows( $modules ) ) :
 
       case 'title_content' :
 
-        // Title, Content
+        // Title & Content
         $title = strip_tags( get_sub_field( 'title' ), $allowable_title_tags );
         $content = strip_tags( get_sub_field( 'content'), $allowable_content_tags );
         $bottom_border = get_sub_field( 'bottom_border' );
@@ -84,10 +95,30 @@ if ( have_rows( $modules ) ) :
 
       case 'gallery_w_captions' :
 
-        // Filtered Gallery
+        // Filtered Gallery with Captions
         $filtered_gallery_w_captions_id = get_sub_field( 'gallery_w_captions' );
 
         include locate_template( $modules_path . 'filtered-gallery-w-captions.php' );
+
+        break;
+
+      case 'iframe' :
+
+        // iFrame
+        $url = get_sub_field( 'url' );
+
+        include locate_template( $modules_path . 'iframe.php' );
+
+        break;
+
+      case 'contact_form' :
+
+        // Contact Form
+        $title = strip_tags( get_sub_field( 'title' ), $allowable_title_tags );
+        $content = strip_tags( get_sub_field( 'content'), $allowable_content_tags );
+        $button = get_sub_field( 'cta' );
+
+        include locate_template( $modules_path . 'contact-form.php' );
 
         break;
 

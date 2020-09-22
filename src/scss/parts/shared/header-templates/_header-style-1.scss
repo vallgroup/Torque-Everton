@@ -139,6 +139,18 @@ header#header-style-1 {
       .location-info {
         margin-bottom: 10px;
       }
+
+      .email-info {
+        .email-title {
+          display: none;
+        }
+      }
+
+      .phone-info {
+        .phone-title {
+          display: none;
+        }
+      }
     }
 
     .drawer-cta {

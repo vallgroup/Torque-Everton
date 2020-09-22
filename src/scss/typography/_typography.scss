@@ -72,3 +72,23 @@ i {
     font-size: 2em;
   }
 }
+
+form {
+  input:not([type="submit"]),
+  textarea
+  {
+    @extend %useFormInput;
+  }
+
+  input[type="submit"] {
+    @extend %useButton;
+
+    &.slim {
+      @extend %useButtonSlim;
+    }
+
+    &.wide {
+      @extend %useButtonWide;
+    }
+  }
+}

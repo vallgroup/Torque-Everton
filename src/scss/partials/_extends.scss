@@ -81,76 +81,11 @@
   margin-right: 10%;
 }
 
-/* %contentRightSpaceLeft {
-  width: 100%;
-
-  @include respond-to(tablet) {
-    width: 65%;
-    margin-left: 35%;
-  }
-  @include respond-to(desktop) {
-    width: 60%;
-    margin-left: 40%;
-  }
+%titleAndContentPaddings {
+  box-sizing: border-box;
+  padding-left: 12%;
+  padding-right: 10%;
 }
-%contentLeftSpaceRight {
-  width: 100%;
-
-  @include respond-to(tablet) {
-    width: 65%;
-    margin-right: 35%;
-  }
-  @include respond-to(desktop) {
-    width: 60%;
-    margin-right: 40%;
-  }
-} */
-
-/* %contentRightSpaceLeft_DesktopOnly {
-  width: 100%;
-
-  @include respond-to(desktop) {
-    width: 70%;
-    margin-left: 30%;
-
-    & > * {
-      flex: 1;
-    }
-  }
-}
-%contentLeftSpaceRight_DesktopOnly {
-  width: 100%;
-  
-  @include respond-to(desktop) {
-    width: 70%;
-    margin-right: 30%;
-  }
-} */
-
-
-/* %contentHeadline {
-  margin-bottom: 15px;
-
-  @include respond-to(tablet) {
-    margin-bottom: 20px;
-  }
-  @include respond-to(desktop) {
-    margin-bottom: 30px;
-  }
-} */
-
-/* %contentTagline {
-  font-size: 1.125em; // ~18px
-  margin-bottom: 10px;
-
-  @include respond-to(tablet) {
-    font-size: 1.3125em; // ~21px
-    margin-bottom: 15px;
-  }
-  @include respond-to(desktop) {
-    margin-bottom: 25px;
-  }
-} */
 
 %contentBody {
   width: 100%;
@@ -166,82 +101,107 @@
   }
 }
 
-/* // regular btn setup
+// regular btn setup
 %useButton_Setup {
-  font-size: 1.5em !important; // ~24px
-  font-family: $fontFamilyHeading;
-  text-align: center;
-  text-transform: uppercase;
-  cursor: pointer;
-  border: 1.5px solid;
-  display: inline-block;
   position: relative;
-  padding: 14px 38px 4px 30px;
-  // margin-top: 10px;
-  margin-bottom: 10px;
-  transition: 0.2s;
-  background-color: transparent;
-  transform: translateX(7px);
-
-  @include respond-to(tablet){
-    font-size: 1.5em; // ~24px
-  }
-
-  &:after {
-    content: '';
-    border: 1.5px solid;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: -8.5px;
-    top: 6px;
-  }
-}
-// alt btn setup
-%useButton_Setup_Alt {
-  font-size: 1.125em !important; // ~18px
-  font-family: $fontFamilyHeading;
-  text-align: center;
-  text-transform: uppercase;
-  cursor: pointer;
-  border: 1.5px solid;
   display: inline-block;
-  position: relative;
-  padding: 7px 30px;
+  padding: 19px 52px;
+  border: 3px solid $khaki;
+  border-radius: 0;
+  background-color: $darkGray;
+  font-family: $fontFamilyBody;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: $khaki;
+  cursor: pointer;
+  letter-spacing: 1.3px;
+  line-height: 19px;
   transition: 0.2s;
 
-  @include respond-to(tablet){
-    font-size: 1.5em; // ~24px
+  -webkit-appearance: none;
+  outline: none;
+
+  &:hover {
+    background-color: $darkGray;
+  }
+
+  // @include respond-to(tablet){
+  //   font-size: 1.5em; // ~24px
+  // }
+  // @include respond-to(desktop){
+  //   font-size: 1.5em; // ~24px
+  // }
+}
+// regular btn
+%useButton {
+  @extend %useButton_Setup;
+}
+// slim btn
+%useButtonSlim {
+  @extend %useButton_Setup;
+
+  letter-spacing: 1.1px;
+  line-height: 15px;
+  padding: 19px 52px;
+}
+// wide btn
+%useButtonWide {
+  @extend %useButton_Setup;
+
+  padding: 22px 81px;
+}
+
+// regular btn setup
+%filteredLoopFilters {
+  @extend %titleAndContentPaddings;
+  padding-top: 23px;
+  padding-bottom: 20px;
+  border-top: 3px solid $khaki;
+  border-bottom: 3px solid $khaki;
+  margin-bottom: $bodyPadding11;
+
+  button {
+    font-family: $fontFamilyHeading2;
+    font-size: 1.25em; // 20px
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    color: $white;
+    padding: 8px 40px 8px 0;
+
+    &.active {
+      color: $khaki;
+    }
   }
 }
-// regular btns
-%useButtonLight {
-  @extend %useButton_Setup;
 
-  color: $white;
-  border-color: $white;
-}
-%useButtonDark {
-  @extend %useButton_Setup;
-  
-  color: $bluegreen;
-  border-color: $bluegreen;
-}
-// alt btns
-%useButtonLight_Alt {
-  @extend %useButton_Setup_Alt;
+%useFormInput {
+  background-color: $mediumGray;
+  border: 1px solid transparent;
+  border-radius: 0;
 
+  font-family: $fontFamilyForms;
+  font-size: 1.25em; // 20px
   color: $white;
-  border-color: $forestGreen;
-  background-color: $forestGreen;
-}
-%useButtonDark_Alt {
-  @extend %useButton_Setup_Alt;
   
-  color: $forestGreen;
-  border-color: $forestGreen;
-  background-color: $white;
-} */
+  width: 100%;
+  box-sizing: border-box;
+  // padding: $bodyPadding3 $bodyPadding4;
+  padding: 0.8em 1.2em;
+  margin-bottom: $bodyPadding3;
+
+  -webkit-appearance: none;
+  outline: none;
+
+  &::placeholder {
+    color: $white45pc;
+  }
+
+  &:focus,
+  &:active {
+    border: 1px solid $khaki;
+  }
+}
 
 /* %useBackgroundGraphicContainer {
   position: absolute;

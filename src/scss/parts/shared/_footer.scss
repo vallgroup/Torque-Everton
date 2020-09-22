@@ -54,6 +54,18 @@ footer {
     }
     &.footer-block-three {
       padding-top: $bodyPadding7;
+
+      .email-info {
+        .email-title {
+          display: none;
+        }
+      }
+
+      .phone-info {
+        .phone-title {
+          display: none;
+        }
+      }
     }
     &.footer-block-four {
       padding-top: $bodyPadding7;

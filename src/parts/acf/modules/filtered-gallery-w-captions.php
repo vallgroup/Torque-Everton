@@ -4,11 +4,11 @@
  */
 
 // options
-$hide_filters = get_field( 'filtered_gallery_hide_filters', $filtered_gallery_id )
-  ? get_field( 'filtered_gallery_hide_filters', $filtered_gallery_id )
+$hide_filters = get_field( 'filtered_gallery_hide_filters', $filtered_gallery_w_captions_id )
+  ? get_field( 'filtered_gallery_hide_filters', $filtered_gallery_w_captions_id )
   : '';
-$use_lightbox = get_field( 'filtered_gallery_use_lightbox', $filtered_gallery_id )
-  ? get_field( 'filtered_gallery_use_lightbox', $filtered_gallery_id )
+$use_lightbox = get_field( 'filtered_gallery_use_lightbox', $filtered_gallery_w_captions_id )
+  ? get_field( 'filtered_gallery_use_lightbox', $filtered_gallery_w_captions_id )
   : '';
 
 if ( class_exists( 'Torque_Filtered_Gallery' ) && class_exists( 'Torque_Filtered_Gallery_Shortcode' ) ) {

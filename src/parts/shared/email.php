@@ -9,6 +9,6 @@ $email = get_field( 'email', 'options' )
 
 if ( $email ) { ?>
   <div class="email-info">
-    <?php echo $email; ?>
+    <span class="email-title">Email: </span><span class="email-content"><?php echo $email; ?></span>
   </div>
 <?php } ?>

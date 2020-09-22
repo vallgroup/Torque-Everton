@@ -12,10 +12,7 @@ $image_cover_class = $contain_image ? 'contain-image' : '';
 $image_offset_class = $offset_image ? 'offset-image' : '';
 ?>
 
-<section 
-  id="tq-cta-banner"
-  class="<?php echo $alignment_class; ?>"
->
+<section class="tq-cta-banner <?php echo $alignment_class; ?>">
   <div class="cta-banner-col-left"></div>
   
   <div class="cta-banner-col-right
