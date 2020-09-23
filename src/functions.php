@@ -50,19 +50,19 @@ if ( class_exists( 'Everton_Customizer' ) ) {
   * Map plugin settings
   */
  
-//  add_filter( 'torque_map_api_key', function( $n ) {
-//    return get_field( 'google_maps_api_key', 'options' )
-//      ? get_field( 'google_maps_api_key', 'options' )
-//      : '';
-//  } );
+ add_filter( 'torque_map_api_key', function( $n ) {
+   return get_field( 'google_maps_api_key', 'options' )
+     ? get_field( 'google_maps_api_key', 'options' )
+     : '';
+ } );
  
-//  add_filter( 'torque_map_pois_allowed', function( $n ) {
-//    return 5;
-//  } );
+ add_filter( 'torque_map_pois_allowed', function( $n ) {
+   return 0;
+ } );
  
-//  // add_filter( 'torque_map_manual_pois', function( $n ) {
-//  //   return true;
-//  // } );
+ // add_filter( 'torque_map_manual_pois', function( $n ) {
+ //   return true;
+ // } );
  
 //  add_filter( 'torque_map_pois_location', function( $n ) {
 //    return 'middle';
