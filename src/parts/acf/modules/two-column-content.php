@@ -4,7 +4,7 @@
  */
 ?>
 
-<section class="tq-two-column-content" class="limit-width narrow">
+<section class="tq-two-column-content">
   <div class="two-column-wrapper">
     <div class="two-column-content-col-left">
       <?php if ( $col_one ) { ?>

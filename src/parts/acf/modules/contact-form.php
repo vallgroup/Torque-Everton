@@ -4,7 +4,7 @@
  */
 ?>
 
-<section class="tq-contact-form limit-width narrow">
+<section class="tq-contact-form">
   <div class="contact-form-col-left">
     
     <?php if ( $content ) { ?>

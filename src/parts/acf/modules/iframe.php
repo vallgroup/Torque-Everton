@@ -4,7 +4,7 @@
  */
 ?>
 
-<section class="tq-iframe limit-width narrow <?php echo $bottom_border_class; ?>">
+<section class="tq-iframe <?php echo $bottom_border_class; ?>">
   <?php if ( $title ) { ?>
     <h2 class="iframe-title">
       <?php echo $title; ?>

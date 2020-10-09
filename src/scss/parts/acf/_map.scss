@@ -5,5 +5,8 @@
   box-sizing: border-box;
   padding: $bodyPadding6 0;
 
+  .content-wrapper {
+    @extend %limitWidthNarrow;
+  }
   
 }

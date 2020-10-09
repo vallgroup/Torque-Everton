@@ -4,13 +4,13 @@ body {
   overflow: hidden;
 }
 
-.limit-width {
-  width: calc(100% - #{$bodyPadding13});
-  max-width: $contentWidthLimit;
-  margin-left: auto;
-  margin-right: auto;
+// .limit-width {
+//   width: calc(100% - #{$bodyPadding13});
+//   max-width: $contentWidthLimit;
+//   margin-left: auto;
+//   margin-right: auto;
 
-  &.narrow {
-    width: calc(100% - (#{$bodyPadding13} + #{$bodyPadding13}));
-  }
-}
+//   &.narrow {
+//     width: calc(100% - (#{$bodyPadding13} + #{$bodyPadding13}));
+//   }
+// }

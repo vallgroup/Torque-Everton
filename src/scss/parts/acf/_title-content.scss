@@ -5,6 +5,8 @@
 
   display: flex;
   flex-direction: column;
+  
+  @extend %limitWidthNarrow;
 
   &.bottom-border {
     border-bottom: 3px solid $khaki;

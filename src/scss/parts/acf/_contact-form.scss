@@ -1,13 +1,14 @@
 .tq-contact-form {
   position: relative;
   box-sizing: border-box;
-  width: 100%;
 
   display: flex;
   flex-direction: row;
 
   padding: $bodyPadding6 0;
   margin-bottom: $bodyPadding6;
+  
+  @extend %limitWidthNarrow;
 
   .contact-form-col-left {
     position: relative;

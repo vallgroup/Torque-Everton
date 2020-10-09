@@ -5,75 +5,80 @@
   box-sizing: border-box;
   padding: $bodyPadding6 0;
 
-  .torque-acf-tabs-filters {
-    @extend %filteredLoopFilters;
-  }
+  .content-wrapper {
+    @extend %limitWidthNarrow;
 
-  .images-wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    .loop-image {
-
-      &.template-1 {
-        padding-bottom: 2%;
-        flex: 1 1 100%;
+    .torque-acf-tabs-filters {
+      @extend %filteredLoopFilters;
+    }
   
-        @include respond-to(tablet) {
-          &:nth-child(4n + 1) {
-            flex: 0 0 49%;
-          }
-          &:nth-child(4n + 2) {
-            flex: 0 0 49%;
-          }
-          &:nth-child(4n + 3) {
-            flex: 0 0 49%;
-          }
-          &:nth-child(4n + 4) {
-            flex: 0 0 49%;
-          }
-        }
-
-        .image-container {
-          position: relative;
-
-          @extend %imageSizeDouble;
-
-          .featured-image {
-            position: absolute;
-
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-    
-            width: 100%;
-            height: 100%;
-    
-            max-height: 100%;
-            min-width: 100%;
-            object-fit: cover;
-            vertical-align: bottom;
-          }
-        }
-
-        .image-caption {
-          // same as H3 styling
-          font-family: $fontFamilyHeading1;
-          font-size: 1.25em; // 20px
-          line-height: $lineHeight8;
-          text-transform: uppercase;
-          margin-top: 0;
-          margin-bottom: 0;
-          letter-spacing: $letterSpacing6;
+    .images-wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
   
-          margin-top: 30px;
-          margin-bottom: 30px;
-          text-align: center;
+      .loop-image {
+  
+        &.template-1 {
+          padding-bottom: 2%;
+          flex: 1 1 100%;
+    
+          @include respond-to(tablet) {
+            &:nth-child(4n + 1) {
+              flex: 0 0 49%;
+            }
+            &:nth-child(4n + 2) {
+              flex: 0 0 49%;
+            }
+            &:nth-child(4n + 3) {
+              flex: 0 0 49%;
+            }
+            &:nth-child(4n + 4) {
+              flex: 0 0 49%;
+            }
+          }
+  
+          .image-container {
+            position: relative;
+  
+            @extend %imageSizeDouble;
+  
+            .featured-image {
+              position: absolute;
+  
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+      
+              width: 100%;
+              height: 100%;
+      
+              max-height: 100%;
+              min-width: 100%;
+              object-fit: cover;
+              vertical-align: bottom;
+            }
+          }
+  
+          .image-caption {
+            // same as H3 styling
+            font-family: $fontFamilyHeading1;
+            font-size: 1.25em; // 20px
+            line-height: $lineHeight8;
+            text-transform: uppercase;
+            margin-top: 0;
+            margin-bottom: 0;
+            letter-spacing: $letterSpacing6;
+    
+            margin-top: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+          }
         }
       }
     }
+
   }
 }
 

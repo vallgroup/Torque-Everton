@@ -10,7 +10,7 @@ $bg_image_url = $image && isset( $image['url'] )
 $alignment_class = 'align-' . $alignment;
 ?>
 
-<section class="tq-title-content-cta-image limit-width <?php echo $alignment_class; ?>">
+<section class="tq-title-content-cta-image <?php echo $alignment_class; ?>">
   <div class="title-content-cta-image-col-left">
     <?php if ( $title ) { ?>
       <h2 class="title-content-cta-image-title">

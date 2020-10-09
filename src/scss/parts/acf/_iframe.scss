@@ -1,9 +1,10 @@
 .tq-iframe {
   position: relative;
-  width: 100%;
 
   box-sizing: border-box;
   padding: $bodyPadding6 0;
+
+  @extend %limitWidthNarrow;
 
   .iframe-title {
     @extend %titleAndContentMargins;

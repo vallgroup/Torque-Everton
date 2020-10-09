@@ -1,3 +1,5 @@
+$bg-img: url('../assets/images/background-graphic-e.png');
+
 .tq-cta-banner {
   position: relative;
   box-sizing: border-box;
@@ -40,6 +42,11 @@
   // Left-aligned content, right image
   .cta-banner-col-left {
     flex: 1 1 20%;
+
+    background-image: $bg-img;
+    background-position: right bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   
   .cta-banner-col-right {

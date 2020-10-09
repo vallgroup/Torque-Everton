@@ -1,3 +1,5 @@
+$bg-img: url('../assets/images/background-graphic-grid.png');
+
 .tq-filtered-gallery {
   position: relative;
   width: 100%;
@@ -5,53 +7,70 @@
   box-sizing: border-box;
   padding: $bodyPadding6 0;
 
-  .torque-acf-tabs-filters {
-    @extend %filteredLoopFilters;
+  .title-content-image-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 45%;
+    
+    // background
+    background-image: $bg-img;
+
+    z-index: -1;
   }
 
-  .images-wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  .content-wrapper {
+    @extend %limitWidthNarrow;
 
-    .loop-image {
-
-      &.template-0 {
-        padding-bottom: 2%;
-        flex: 1 1 100%;
+    .torque-acf-tabs-filters {
+      @extend %filteredLoopFilters;
+    }
   
-        @include respond-to(tablet) {
-          &:nth-child(4n + 1) {
-            flex: 0 0 49%;
-          }
-          &:nth-child(4n + 2) {
-            flex: 0 0 49%;
-          }
-          &:nth-child(4n + 3) {
-            flex: 0 0 100%;
-          }
-          &:nth-child(4n + 4) {
-            flex: 0 0 49%;
-          }
-          &:nth-child(4n + 4) {
-            flex: 0 0 49%;
+    .images-wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  
+      .loop-image {
+  
+        &.template-0 {
+          padding-bottom: 2%;
+          flex: 1 1 100%;
+    
+          @include respond-to(tablet) {
+            &:nth-child(4n + 1) {
+              flex: 0 0 49%;
+            }
+            &:nth-child(4n + 2) {
+              flex: 0 0 49%;
+            }
+            &:nth-child(4n + 3) {
+              flex: 0 0 100%;
+            }
+            &:nth-child(4n + 4) {
+              flex: 0 0 49%;
+            }
+            &:nth-child(4n + 4) {
+              flex: 0 0 49%;
+            }
           }
         }
-      }
-
-      .featured-image {
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-
-        width: 100%;
-        height: 100%;
-
-        max-height: 100%;
-        min-width: 100%;
-        object-fit: cover;
-        vertical-align: bottom;
+  
+        .featured-image {
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+  
+          width: 100%;
+          height: 100%;
+  
+          max-height: 100%;
+          min-width: 100%;
+          object-fit: cover;
+          vertical-align: bottom;
+        }
       }
     }
   }

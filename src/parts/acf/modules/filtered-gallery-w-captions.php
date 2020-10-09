@@ -17,7 +17,7 @@ if ( class_exists( 'Torque_Filtered_Gallery' ) && class_exists( 'Torque_Filtered
 ?>
 
 <section class="tq-filtered-gallery-w-captions">
-  <div class="content-wrapper limit-width narrow">
+  <div class="content-wrapper">
     <?php if ( $filtered_gallery_w_captions_id ) { 
       echo do_shortcode( '[torque_filtered_gallery gallery_id="' . $filtered_gallery_w_captions_id . '" hide_filters="' . $hide_filters . '" use_lightbox="' . $use_lightbox . '"]' );
     } ?>

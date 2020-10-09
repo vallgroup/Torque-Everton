@@ -2,6 +2,8 @@
   position: relative;
   box-sizing: border-box;
   padding: $bodyPadding6 0;
+  
+  @extend %limitWidth;
 
   .two-column-wrapper {
     display: flex;

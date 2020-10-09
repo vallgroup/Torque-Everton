@@ -14,6 +14,20 @@
   }
 }
 
+%limitWidth_Setup {
+  width: calc(100% - #{$bodyPadding13});
+  max-width: $contentWidthLimit;
+  margin-left: auto;
+  margin-right: auto;
+}
+%limitWidth {
+  @extend %limitWidth_Setup;
+}
+%limitWidthNarrow {
+  @extend %limitWidth_Setup;
+  width: calc(100% - (#{$bodyPadding13} + #{$bodyPadding13}));
+}
+
 %imageSize {
   position: relative;
   padding-bottom: 80%;
@@ -166,11 +180,11 @@
     background-color: transparent;
     border: 0;
     border-radius: 0;
-    color: $white;
+    color: $khaki;
     padding: 8px 40px 8px 0;
 
     &.active {
-      color: $khaki;
+      color: $white;
     }
   }
 }
