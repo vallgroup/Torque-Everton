@@ -36,6 +36,17 @@ if ( have_rows( $modules ) ) :
 
         break;
 
+      case 'title_content' :
+
+        // Title & Content
+        $title = strip_tags( get_sub_field( 'title' ), $allowable_title_tags );
+        $content = strip_tags( get_sub_field( 'content'), $allowable_content_tags );
+        $bottom_border = get_sub_field( 'bottom_border' );
+        
+        include locate_template( $modules_path . 'title-content.php' );
+
+        break;
+
       case 'cta_banner' :
 
         // CTA Banner
@@ -63,14 +74,15 @@ if ( have_rows( $modules ) ) :
 
         break;
 
-      case 'title_content' :
+      case 'title_content_image' :
 
-        // Title & Content
+        // Title, Content & Image (2 Cols)
+        $alignment = get_sub_field( 'alignment' );
         $title = strip_tags( get_sub_field( 'title' ), $allowable_title_tags );
         $content = strip_tags( get_sub_field( 'content'), $allowable_content_tags );
-        $bottom_border = get_sub_field( 'bottom_border' );
-        
-        include locate_template( $modules_path . 'title-content.php' );
+        $image = get_sub_field( 'image' );
+
+        include locate_template( $modules_path . 'title-content-image.php' );
 
         break;
 
@@ -119,6 +131,22 @@ if ( have_rows( $modules ) ) :
         $button = get_sub_field( 'cta' );
 
         include locate_template( $modules_path . 'contact-form.php' );
+
+        break;
+
+      case 'map' :
+
+        // Map
+        $map_id = get_sub_field( 'map' );
+
+        include locate_template( $modules_path . 'map.php' );
+
+        break;
+
+      case 'rentcafe_floorplans' :
+
+        // Rentcafe Floorplans
+        include locate_template( $modules_path . 'rentcafe-floorplans.php' );
 
         break;
 

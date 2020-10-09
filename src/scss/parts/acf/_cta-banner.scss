@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: row;
 
-  border-bottom: 3px solid $khaki;
+  border-bottom: $borderThick solid $khaki;
 
   // Right-aligned content, left image
   &.align-right {
@@ -16,7 +16,7 @@
 
     .cta-banner-col-right {
       border-left: 0;
-      border-right: 3px solid $khaki;
+      border-right: $borderThick solid $khaki;
     }
 
     // TODO: align correctly/responsively

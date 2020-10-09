@@ -1,0 +1,87 @@
+.tq-rentcafe-floorplans {
+  position: relative;
+  width: 100%;
+
+  box-sizing: border-box;
+  padding: $bodyPadding6 0;
+
+  .FloorplansContainer {
+    padding: $bodyPadding7 0;
+
+    .FloorplanContainer {
+      border-top: $borderThick solid $khaki;
+      border-bottom: $borderThick solid $khaki;
+      background-color: $mediumGray;
+      padding: 3% 0.5% 0;
+      margin-bottom: $bodyPadding10;
+
+      flex: 0 0 100%;
+
+      @include respond-to(tablet) {
+        flex: 0 0 48%;
+      }
+      @include respond-to(desktop) {
+        flex: 0 0 31%;
+      }
+
+      // .FloorplanImageContainer {}
+
+      .FloorplanContentContainer {
+        padding: 1.2em 3em;
+
+        // .TitleContainer {}
+  
+        .DetailsContainer {
+
+          .DetailWrapper {
+            
+            &:before {
+              width: 25px;
+              height: 25px;
+              margin-right: 0.2em;
+            }
+
+            &.Type {
+              &:before {
+                content: 'type';
+              }
+            }
+            &.SF {
+              &:before {
+                content: 'sf';
+              }
+            }
+            &.Price {
+              &:before {
+                content: 'price';
+              }
+            }
+
+            .DetailName {
+              width: 0;
+              overflow: hidden;
+            }
+  
+            .DetailValue {
+              opacity: 0.6;
+            }
+          }
+        }
+      }
+
+      .FloorplanButtonsContainer {
+        margin-top: -25px;
+        transform: translateY(50%);
+
+        .FloorplanButton {
+          @extend %useButtonSlim;
+          margin: 0 auto;
+
+          &:first-child {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

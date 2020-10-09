@@ -106,7 +106,7 @@
   position: relative;
   display: inline-block;
   padding: 19px 52px;
-  border: 3px solid $khaki;
+  border: $borderThick solid $khaki;
   border-radius: 0;
   background-color: $darkGray;
   font-family: $fontFamilyBody;
@@ -156,8 +156,8 @@
   @extend %titleAndContentPaddings;
   padding-top: 23px;
   padding-bottom: 20px;
-  border-top: 3px solid $khaki;
-  border-bottom: 3px solid $khaki;
+  border-top: $borderThick solid $khaki;
+  border-bottom: $borderThick solid $khaki;
   margin-bottom: $bodyPadding11;
 
   button {

@@ -1,0 +1,38 @@
+.tq-title-content-image {
+  position: relative;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  padding: $bodyPadding7 0;
+
+  &.align-right {
+    flex-direction: row-reverse;
+  }
+
+  .title-content-image-col-left {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .title-content-image-title {
+      @extend %contentWithAdjacentImageMargins;
+    }
+
+    .title-content-image-content {
+      @extend %contentWithAdjacentImageMargins;
+    }
+  }
+  
+  .title-content-image-col-right {
+    position: relative;
+    flex: 1 1 55%;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @extend %imageSize;
+  }
+}

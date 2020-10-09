@@ -14,7 +14,7 @@
     flex: 1 1 50%;
     box-sizing: border-box;
     padding: 0 $bodyPadding10 0 $bodyPadding14;
-    border-bottom: 3px solid $khaki;
+    border-bottom: $borderThick solid $khaki;
 
     .contact-form-content {
       max-width: 265px;
@@ -32,7 +32,7 @@
     box-sizing: border-box;
     padding: 0 $bodyPadding7 0 0;
 
-    border-bottom: 3px solid $khaki;
+    border-bottom: $borderThick solid $khaki;
 
     // .contact-form-content {}
 

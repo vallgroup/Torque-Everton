@@ -36,14 +36,6 @@ if ( class_exists( 'Everton_Customizer' ) ) {
  if ( class_exists( 'Everton_ACF' ) ) {
    new Everton_ACF();
  }
-
- /**
-  * Child Theme ACF
-  */
- 
- if ( class_exists( 'The_Venn_ACF' ) ) {
-   new The_Venn_ACF();
- }
  
  
  /**
@@ -103,8 +95,6 @@ if ( class_exists( 'Everton_Customizer' ) ) {
 
  }
  add_action( 'admin_menu', 'torque_remove_menus' );
-
-
 
 
 /**

@@ -7,7 +7,7 @@ footer {
   padding: $bodyPadding5 $bodyPadding1;
 
   background-color: $mediumGray;
-  border-top: 3px solid $khaki;
+  border-top: $borderThick solid $khaki;
 
   @include respond-to(tablet) {
     padding: $bodyPadding5 $bodyPadding1;
