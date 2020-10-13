@@ -1,4 +1,6 @@
-<? // Template for displaying the header CTA menu 
+<?php 
+
+// Template for displaying the header CTA menu
 
 $menu_name = 'cta_menu';
  
