@@ -33,6 +33,7 @@
   padding-bottom: 80%;
   width: 100%;
   height: 0;
+  overflow: hidden;
 
   @include respond-to(tablet) {
     padding-bottom: 56%;
@@ -48,6 +49,7 @@
   padding-bottom: 65%;
   width: 100%;
   height: 0;
+  overflow: hidden;
 
   @include respond-to(tablet) {
     padding-bottom: 45%;
@@ -63,6 +65,7 @@
   padding-bottom: 95%;
   width: 100%;
   height: 0;
+  overflow: hidden;
 
   @include respond-to(tablet) {
     padding-bottom: 80%;
@@ -79,6 +82,19 @@
   left: 0;
   width: 100%;
   height: 100%;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+%videoInner {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transform: translateY(-50%);
 
   background-repeat: no-repeat;
   background-size: cover;
