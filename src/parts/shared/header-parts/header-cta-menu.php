@@ -14,7 +14,8 @@ if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name 
     foreach ( (array) $menu_items as $key => $menu_item ) {
         $title = $menu_item->title;
         $url = $menu_item->url;
-        $menu_list .= '<div class="cta-menu-item"><a href="' . $url . '">' . $title . '</a></div>';
+        $target = $menu_item->target;
+        $menu_list .= '<div class="cta-menu-item"><a href="' . $url . '" target="' . $target . '">' . $title . '</a></div>';
     }
     $menu_list .= '</div>';
 }
