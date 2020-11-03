@@ -1,4 +1,4 @@
-$bg-img: url('../assets/images/background-graphic-grid.png');
+// $bg-img: url('../assets/images/background-graphic-grid.png');
 
 .tq-title-content-image {
   position: relative;
@@ -15,20 +15,31 @@ $bg-img: url('../assets/images/background-graphic-grid.png');
     .title-content-image-background {
       right: unset;
       left: 0;
+      background-position: right top;
+
+      border-right: 4px solid $mediumGray;
     }
   }
 
   .title-content-image-background {
     position: absolute;
-    top: 0;
+    top: $bodyPadding7;
     right: 0;
-    height: 100%;
     width: 45%;
+    height: calc(100% - #{$bodyPadding7});
     
     // background
-    background-image: $bg-img;
+    // background-image: $bg-img;
+    // background-size: contain;
+    background-position: left top;
+    background-repeat: repeat;
 
-    z-index: -1;
+    background-image: linear-gradient($mediumGray 4px, transparent 4px), linear-gradient(90deg, $mediumGray 4px, transparent 4px);
+    background-size: $bodyPadding9 $bodyPadding9;
+
+    border-bottom: 4px solid $mediumGray;
+
+    opacity: 0.6;
   }
 
   .content-wrapper {

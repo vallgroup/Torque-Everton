@@ -1,6 +1,10 @@
 .btn-primary {
-  @extend %useButton;
+  &:not(.slim),
+  &:not(.wide) {
+    @extend %useButton;
+  }
 
+  // TODO: slim class not changing the padding... (on CTA banner specifically?)
   &.slim {
     @extend %useButtonSlim;
   }

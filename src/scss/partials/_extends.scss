@@ -15,10 +15,19 @@
 }
 
 %limitWidth_Setup {
-  width: calc(100% - #{$bodyPadding13});
+  width: calc(100% - #{$bodyPadding7});
   max-width: $contentWidthLimit;
   margin-left: auto;
   margin-right: auto;
+
+  @include respond-to(tablet) {
+    width: calc(100% - #{$bodyPadding10});
+  }
+    
+  @include respond-to(desktop) {
+    width: calc(100% - #{$bodyPadding13});
+  }
+  
 }
 %limitWidth {
   @extend %limitWidth_Setup;
@@ -40,7 +49,7 @@
   }
 
   @include respond-to(desktop) {
-    padding-bottom: 46%;
+    padding-bottom: 44%;
   }
 }
 
@@ -135,13 +144,14 @@
 %useButton_Setup {
   position: relative;
   display: inline-block;
-  padding: 19px 52px;
+  padding: 10px 15px;
   border: $borderThick solid $khaki;
   border-radius: 0;
   background-color: $darkGray;
-  font-family: $fontFamilyBody;
+  font-family: $fontFamilyHeading1;
   font-size: 13px;
   text-transform: uppercase;
+  text-align: center;
   color: $khaki;
   cursor: pointer;
   letter-spacing: 1.3px;
@@ -154,13 +164,12 @@
   &:hover {
     background-color: $darkGray;
   }
-
-  // @include respond-to(tablet){
-  //   font-size: 1.5em; // ~24px
-  // }
-  // @include respond-to(desktop){
-  //   font-size: 1.5em; // ~24px
-  // }
+    
+  // @include respond-to(tablet) {}
+  
+  @include respond-to(desktop) {
+    padding: 20px 30px;
+  }
 }
 // regular btn
 %useButton {
@@ -172,13 +181,24 @@
 
   letter-spacing: 1.1px;
   line-height: 15px;
-  padding: 19px 52px;
+  padding: 10px 15px;
+    
+  // @include respond-to(tablet) {}
+  
+  @include respond-to(desktop) {
+    padding: 20px 30px;
+  }
 }
 // wide btn
 %useButtonWide {
   @extend %useButton_Setup;
-
-  padding: 22px 81px;
+  padding: 10px 40px;
+    
+  // @include respond-to(tablet) {}
+  
+  @include respond-to(desktop) {
+    padding: 22px 81px;
+  }
 }
 
 // regular btn setup
@@ -188,7 +208,6 @@
   padding-bottom: 20px;
   border-top: $borderThick solid $khaki;
   border-bottom: $borderThick solid $khaki;
-  margin-bottom: $bodyPadding11;
 
   button {
     font-family: $fontFamilyHeading2;

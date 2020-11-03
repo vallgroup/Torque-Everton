@@ -83,9 +83,9 @@ $bg-img: url('../assets/images/background-graphic-e.png');
       }
     }
     &.offset-image {
-      // ACF conditional means that the image can only be offset when it is also set to contained
+      // ACF conditional statement states that the image can only be offset when it is also set to contained, hence the location of this styling.
       img {
-        top: $bodyPadding10;
+        top: 16%;
       }
     }
   }

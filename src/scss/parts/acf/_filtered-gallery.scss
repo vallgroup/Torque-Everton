@@ -1,4 +1,4 @@
-$bg-img: url('../assets/images/background-graphic-grid.png');
+// $bg-img: url('../assets/images/background-graphic-grid.png');
 
 .tq-filtered-gallery {
   position: relative;
@@ -9,13 +9,28 @@ $bg-img: url('../assets/images/background-graphic-grid.png');
 
   .title-content-image-background {
     position: absolute;
-    top: 0;
+    top: $bodyPadding6;
     right: 0;
-    height: 100%;
     width: 45%;
+    height: calc(100% - #{$bodyPadding6} - #{$bodyPadding6});
+
+    &.filters-offset {
+      height: calc(100% - 258px);
+      top: 160px;
+    }
     
     // background
-    background-image: $bg-img;
+    // background-image: $bg-img;
+    // background-size: contain;
+    background-position: left top;
+    background-repeat: repeat;
+
+    background-image: linear-gradient($mediumGray 4px, transparent 4px), linear-gradient(90deg, $mediumGray 4px, transparent 4px);
+    background-size: $bodyPadding9 $bodyPadding9;
+
+    border-bottom: 4px solid $mediumGray;
+
+    opacity: 0.6;
 
     z-index: -1;
   }
@@ -32,6 +47,9 @@ $bg-img: url('../assets/images/background-graphic-grid.png');
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
+
+      padding-top: $bodyPadding11;
+      padding-bottom: $bodyPadding11;
   
       .loop-image {
   
