@@ -1,67 +1,123 @@
-$bg-img: url('../assets/images/background-graphic-e.png');
+$bg-img-mobile: url('../assets/images/background-graphic-e.png');
+$bg-img-desktop: url('../assets/images/background-graphic-e.png');
+$bg-img-height-mobile: 170px;
+$bg-img-height-tablet: 240px;
 
 .tq-cta-banner {
   position: relative;
   box-sizing: border-box;
   width: 100%;
-
-  display: flex;
-  flex-direction: row;
-
   border-bottom: $borderThick solid $khaki;
+  display: flex;
+  flex-direction: column;
+  margin-top: $bodyPadding3;
+
+  @include respond-to(tablet) {
+    margin-top: $bodyPadding6;
+  }
+  
+  @include respond-to(desktop) {
+    flex-direction: row;
+    margin-top: 0;
+  }
 
   // Right-aligned content, left image
   &.align-right {
-    flex-direction: row-reverse;
+    flex-direction: column-reverse;
+    margin-top: $bodyPadding6;
+
+    @include respond-to(tablet) {
+      margin-top: $bodyPadding12;
+    }
+    
+    @include respond-to(desktop) {
+      flex-direction: row-reverse;
+      margin-top: 0;
+    }
 
     // .cta-banner-col-left {}
 
     .cta-banner-col-right {
       border-left: 0;
+      border-top: 0;
       border-right: $borderThick solid $khaki;
     }
 
-    // TODO: align correctly/responsively
     .cta-banner-title {
-      bottom: 5%;
-      left: unset;
-      right: -5.5em;
-      transform: rotate(-90deg);
+      top: unset;
+      bottom: calc(#{$bg-img-height-mobile} / 2);
+      transform: translateY(50%);
+      
+      @include respond-to(tablet) {
+        bottom: calc(#{$bg-img-height-tablet} / 2);
+      }
+
+      @include respond-to(desktop) {
+        bottom: 5%;
+        left: unset;
+        right: -5.5em;
+        transform: rotate(-90deg);
+      }
     }
 
     .cta-banner-button {
-      left: unset;
-      right: 20%;
+      top: unset;
+      bottom: -35px;
+      // left: 16%;
+      // right: unset;
+    
+      // @include respond-to(tablet) {
+      //   left: 18%;
+      // }
+
+      @include respond-to(desktop) {
+        right: 20%;
+        left: unset;
+      }
 
       .btn-primary {
-        transform: translateX(50%);
+        transform: translateX(0%);
+
+        @include respond-to(desktop) {
+          transform: translateX(50%);
+        }
       }
     }
   }
 
   // Left-aligned content, right image
   .cta-banner-col-left {
-    flex: 1 1 20%;
-
-    background-image: $bg-img;
+    background-image: $bg-img-mobile;
     background-position: right bottom;
     background-size: cover;
     background-repeat: no-repeat;
+    min-height: $bg-img-height-mobile;
+    
+    @include respond-to(tablet) {
+      min-height: $bg-img-height-tablet;
+    }
+
+    @include respond-to(desktop) {
+      flex: 1 1 20%;
+      background-image: $bg-img-desktop;
+    }
   }
   
   .cta-banner-col-right {
     position: relative;
-    flex: 1 1 80%;
-
-    border-left: 3px solid $khaki;
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
     overflow: hidden;
-
+    border-top: 3px solid $khaki;
     @extend %imageSize;
+
+    @include respond-to-max(tablet) {
+      padding-bottom: 65%;
+    }
+    
+    @include respond-to(desktop) {
+      flex: 1 1 80%;
+      border-top: 0;
+      border-left: 3px solid $khaki;
+    }
 
     img {
       width: 100%;
@@ -76,40 +132,81 @@ $bg-img: url('../assets/images/background-graphic-e.png');
         left: 0;
         right: 0;
         margin: auto;
-        max-height: 90%;
+        max-height: 100%;
         max-width: 100%;
         height: auto;
         width: auto;
+
+        @include respond-to(desktop) {
+          max-height: 90%;
+        }
       }
     }
     &.offset-image {
       // ACF conditional statement states that the image can only be offset when it is also set to contained, hence the location of this styling.
       img {
-        top: 16%;
+        top: 8%;
+
+        @include respond-to(tablet) {
+          top: 1%;
+        }
+
+        @include respond-to(desktop) {
+          top: 16%;
+        }
       }
     }
   }
 
-  // TODO: align correctly/responsively
   .cta-banner-title {
     position: absolute;
-    bottom: 45%;
-    left: 15%;
-    transform: 
-      rotate(-90deg)
-      translateX(-50%)
-      translateY(-50%);
-    transform-origin: left;
+    top: calc(#{$bg-img-height-mobile} / 2);
+    bottom: unset;
+    left: 16%;
+    transform: translateY(-50%);
+    
+    @include respond-to(tablet) {
+      left: 18%;
+      top: calc(#{$bg-img-height-tablet} / 2);
+    }
+
+    @include respond-to(desktop) {
+      top: unset;
+      bottom: 45%;
+      left: 15%;
+      transform: 
+        rotate(-90deg)
+        translateX(-50%)
+        translateY(-50%);
+      transform-origin: left;
+    }
   }
 
   .cta-banner-button {
     position: absolute;
-    bottom: -35px;
-    left: 20%;
+    top: calc(#{$bg-img-height-mobile} - 35px);
+    bottom: unset;
+    left: 16%;
+    right: unset;
+    
+    @include respond-to(tablet) {
+      top: calc(#{$bg-img-height-tablet} - 35px);
+      left: 18%;
+    }
+
+    @include respond-to(desktop) {
+      top: unset;
+      bottom: -35px;
+      left: 20%;
+    }
 
     .btn-primary {
-      transform: translateX(-50%);
+      transform: translateX(0%);
       padding: 22px 81px;
+
+      @include respond-to(desktop) {
+        transform: translateX(-50%);
+      }
     }
   }
 }

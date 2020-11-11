@@ -8,11 +8,17 @@ body {
 
 h1 {
   font-family: $fontFamilyHeading1;
-  font-size: 2.6875em; // 43px
-  line-height: $lineHeight5;
+  font-size: 1.5em; // 24px
+  line-height: $lineHeight1;
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
+
+
+  @include respond-to(tablet) {
+    font-size: 2.6875em; // 43px
+    line-height: $lineHeight5;
+  }
 }
 
 h2 {

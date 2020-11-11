@@ -5,21 +5,32 @@
 
   @extend %limitWidth;
 
+  // left-aligned
   &.align-left {
-    flex-direction: column;
+    flex-direction: column-reverse;
     
-    @include respond-to(tablet) {
+    @include respond-to(desktop) {
       flex-direction: row;
       margin-right: 0;
     }
   }
 
+  // right-aligned
   &.align-right {
-    flex-direction: column;
+    flex-direction: column-reverse;
 
-    @include respond-to(tablet) {
+    @include respond-to(desktop) {
       flex-direction: row-reverse;
       margin-left: 0;
+    }
+  }
+
+  // general col/row styles
+  & > div {
+    margin-top: $bodyPadding4;
+    
+    @include respond-to(desktop) {
+      margin-top: 0;
     }
   }
 
@@ -46,11 +57,21 @@
 
     .title-content-cta-image-button {
       position: relative;
-      margin-top: $bodyPadding8;
+      margin-top: $bodyPadding4;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
+      
+      @include respond-to(desktop) {
+        margin-top: $bodyPadding8;
+      }
+
+      .offset-hr {
+        @include respond-to-max(desktop) {
+          display: none;
+        }
+      }
 
       .btn-primary {
         @extend %contentWithAdjacentImageMargins;

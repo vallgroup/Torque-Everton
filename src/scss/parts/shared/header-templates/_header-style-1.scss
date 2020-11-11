@@ -5,21 +5,36 @@ header#header-style-1 {
 
   .torque-header-content-wrapper {
     display: flex;
-
+    
+    // left area
     .torque-header-left-area-wrapper {
       flex: 1;
       padding-left: $bodyPadding4;
+
+      a > div {
+        width: 90px;
+        
+        @include respond-to(desktop) {
+          width: 120px;
+        }
+      }
     }
 
+    // right area
     .torque-header-right-area-wrapper {
       display: flex;
       flex: 2;
       
+      // CTA menu (desktop)
       .cta-menu-container {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        flex: 5;
+        display: none;
+
+        @include respond-to(desktop) {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          flex: 5;
+        }
 
         .cta-menu-item {
           font-family: $fontFamilyHeading1;
@@ -43,6 +58,7 @@ header#header-style-1 {
         }
       }
       
+      // Burger toggle (tablet & mobile)
       .burger-menu-container {
         position: relative;
         flex: 1;
@@ -83,6 +99,7 @@ header#header-style-1 {
     }
   }
 
+  // Burger menu items (tablet & mobile)
   .torque-header-menu-items-mobile {
     position: absolute;
     top: calc(100% + 1px);
@@ -96,34 +113,62 @@ header#header-style-1 {
       right: 0%;
     }
 
+    // CTA items
+    .cta-menu-container {
+      padding: 20px 29px 0px 50px;
+
+      @include respond-to(desktop) {
+        display: none;
+      }
+
+      .cta-menu-item {
+        width: 252px;
+        padding: 10px 0;
+        border-bottom: 1px solid $khaki;
+        text-align: right;
+        margin: 0 0 0 auto;
+
+        a {
+          font-family: $fontFamilyBody;
+          font-size: 0.875em;
+          text-transform: uppercase;
+          color: $white;
+          letter-spacing: $letterSpacing3;
+          line-height: $lineHeight2;
+        }
+      }
+    }
+
+    // Main navigation items
     .torque-menu-items-stacked {
-      padding: 90px 52px 40px 145px;
+      padding: 0px 29px 40px 50px;
+
+      @include respond-to(desktop) {
+        padding: 90px 52px 40px 145px;
+      }
 
       .torque-menu-item-wrapper  {
         width: 252px;
         padding: 10px 0;
         border-bottom: 1px solid $khaki;
         text-align: right;
+        margin: 0 0 0 auto;
 
         .torque-menu-item {
           font-family: $fontFamilyBody;
-          font-size: 1em;
+          font-size: 0.875em;
           text-transform: uppercase;
           color: $white;
           letter-spacing: $letterSpacing3;
           line-height: $lineHeight2;
           
-          @include respond-to(tablet) {
-            font-size: 0.875em;
-          }
-  
-          @include respond-to(desktop) {
-            font-size: 0.875em;
-          }
+          // @include respond-to(tablet) {}
+          // @include respond-to(desktop) {}
         }
       }
     }
 
+    // additional contant info
     .drawer-contact-container {
       padding: 0px 52px 40px 145px;
       text-align: right;

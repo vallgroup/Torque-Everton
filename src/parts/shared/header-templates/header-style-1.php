@@ -46,6 +46,9 @@ $call_to_action = get_field( 'drawer_menu_cta', 'options' );
   </div>
 
   <div class="col1 torque-navigation-toggle torque-header-menu-items-mobile">
+    <?php // CTA Menu 
+      get_template_part( 'parts/shared/header-parts/header-cta-menu' );
+    ?>
     <?php // Burger Nav Items 
       get_template_part( 'parts/shared/header-parts/menu-items/menu-items', 'stacked' ); 
     ?>

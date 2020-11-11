@@ -1,74 +1,99 @@
 footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-
   box-sizing: border-box;
-  padding: $bodyPadding5 $bodyPadding1;
+  padding: $bodyPadding8 $bodyPadding1;
 
   background-color: $mediumGray;
   border-top: $borderThick solid $khaki;
 
   @include respond-to(tablet) {
-    padding: $bodyPadding5 $bodyPadding1;
+    padding: $bodyPadding6 $bodyPadding1;
   }
 
   @include respond-to(desktop) {
     padding: $bodyPadding12 $bodyPadding1 $bodyPadding10;
   }
 
+  .footer-content-wrapper  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @extend %limitWidth;
+
+    &.mobile-footer {
+      @include respond-to(tablet) {
+        display: none;
+      }
+    }
+  
+    &.desktop-footer {
+      @include respond-to-max(tablet) {
+        display: none;
+      }
+    }
+  }
+
   .footer-block {
     width: 100%;
     text-align: center;
     opacity: 0.62;
-
-    @include respond-to(tablet) {
-      flex: 1 1 50%;
-      text-align: left;
-    }
-
-    @include respond-to(desktop) {
-      width: auto;
+    text-align: left;
       
-      &.footer-block-one {
-        flex: 1 1 40%;
-      }
-      &.footer-block-two,
-      &.footer-block-three,
-      &.footer-block-four
-      {
-        flex: 1 1 20%;
-      }
-    }
-
     &.footer-block-one {
-      text-align: center;
+      padding: 0 0 $bodyPadding5 0;
 
-      .torque-logo {
-        width: 213px;
-        height: auto;
-      }
-    }
-    &.footer-block-two {
-      padding-top: $bodyPadding7;
-    }
-    &.footer-block-three {
-      padding-top: $bodyPadding7;
-
-      .email-info {
-        .email-title {
-          display: none;
-        }
+      @include respond-to(tablet) {
+        flex: 1 1 100%;
       }
 
-      .phone-info {
-        .phone-title {
-          display: none;
-        }
+      @include respond-to(desktop) {
+        padding: 0;
+        width: auto;
+        flex: 1 1 31%;
+        text-align: center;
       }
     }
-    &.footer-block-four {
-      padding-top: $bodyPadding7;
+    &.footer-block-two,
+    &.footer-block-three,
+    &.footer-block-four
+    {
+      @include respond-to(tablet) {
+        flex: 1 1 33.33%;
+      }
+
+      @include respond-to(desktop) {
+        width: auto;
+        flex: 1 1 23%;
+        padding-top: $bodyPadding7;
+      }
     }
+  }
+
+  &.footer-block-one {
+    .torque-logo {
+      width: 213px;
+      height: auto;
+    }
+  }
+  &.footer-block-two {
+    padding-top: $bodyPadding7;
+  }
+  &.footer-block-three {
+    padding-top: $bodyPadding7;
+
+    .email-info {
+      .email-title {
+        display: none;
+      }
+    }
+
+    .phone-info {
+      .phone-title {
+        display: none;
+      }
+    }
+  }
+  &.footer-block-four {
+    padding-top: $bodyPadding7;
   }
 }
