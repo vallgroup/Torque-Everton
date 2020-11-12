@@ -17,7 +17,11 @@
   }
 
   .title-content-content {
-    max-width: 55%;
     @extend %titleAndContentMargins;
+    max-width: 100%;
+
+    @include respond-to(desktop) {
+      max-width: 55%;
+    }
   }
 }

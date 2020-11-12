@@ -8,8 +8,42 @@
   .content-wrapper {
     @extend %limitWidthNarrow;
 
+    .FiltersContainer {
+      .FilterContainer {
+        .FilterTitle {
+          @include respond-to-max(tablet) {
+            padding: 0;
+          }
+          @include respond-to-max(desktop) {
+            padding: 0px 20px 0px 20px;
+          }
+        }
+
+        .FilterButtonsContainer {
+          @include respond-to-max(desktop) {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+          }
+
+          .FilterButton {
+            @include respond-to-max(desktop) {
+              flex: 0 0 auto;
+              margin-right: 20px;
+            }
+          }
+        }
+      }
+    }
+
     .FloorplansContainer {
+      flex-direction: column;
+      justify-content: center !important;
       padding: $bodyPadding7 0;
+  
+      @include respond-to(tablet) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
   
       .FloorplanContainer {
         border-top: $borderThick solid $khaki;
@@ -17,14 +51,12 @@
         background-color: $mediumGray;
         padding: 3% 0.5% 0;
         margin-bottom: $bodyPadding10;
-  
         flex: 0 0 100%;
-  
-        @include respond-to(tablet) {
-          flex: 0 0 48%;
-        }
+        max-width: 378px;
+
         @include respond-to(desktop) {
           flex: 0 0 31%;
+          max-width: unset;
         }
   
         // .FloorplanImageContainer {}

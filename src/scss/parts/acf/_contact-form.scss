@@ -1,59 +1,55 @@
 .tq-contact-form {
   position: relative;
   box-sizing: border-box;
-
-  display: flex;
-  flex-direction: row;
-
   padding: $bodyPadding6 0;
-  margin-bottom: $bodyPadding6;
-  
   @extend %limitWidthNarrow;
 
-  .contact-form-col-left {
-    position: relative;
-    flex: 1 1 50%;
-    box-sizing: border-box;
-    padding: 0 $bodyPadding10 0 $bodyPadding14;
-    border-bottom: $borderThick solid $khaki;
+  .contact-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    @extend %titleAndContentMargins;
 
-    .contact-form-content {
-      max-width: 265px;
-      margin: 0 auto $bodyPadding6 0;
+    @include respond-to(desktop) {
+      flex-direction: row;
     }
-
-    .location-info {
-      margin: $bodyPadding5 auto $bodyPadding5 0;
-    }
-  }
+    
+    .contact-form-col-left {
+      position: relative;
+      flex: 1 1 40%;
+      // box-sizing: border-box;
+      // padding: 0 $bodyPadding10 0 0;
   
-  .contact-form-col-right {
-    position: relative;
-    flex: 1 1 50%;
-    box-sizing: border-box;
-    padding: 0 $bodyPadding7 0 0;
+      .email-info,
+      .phone-info,
+      .location-info
+      {
+        margin-bottom: $bodyPadding5;
+      }
 
-    border-bottom: $borderThick solid $khaki;
-
-    // .contact-form-content {}
-
-    form {
-      .btn-primary {
-        display: block;
-        margin: $bodyPadding2 auto -28px;
+      .email-title,
+      .phone-title
+      {
+        display: none;
       }
     }
-  }
-
-  // TODO: align correctly/responsively
-  .contact-form-title {
-    position: absolute;
-    bottom: 50%;
-    left: 1.5em;
-    transform: 
-      rotate(-90deg)
-      translateX(-50%)
-      translateY(-50%);
-    transform-origin: left;
+    
+    .contact-form-col-right {
+      position: relative;
+      flex: 1 1 60%;
+      // box-sizing: border-box;
+      // padding: 0 $bodyPadding7 0 0;
+  
+      // .contact-form-content {
+      //   max-width: 265px;
+      //   margin: 0 auto $bodyPadding6 0;
+      // }
+  
+      form {
+        .btn-primary {
+          display: block;
+          margin: $bodyPadding2 auto 0 0;
+        }
+      }
+    }
   }
 }

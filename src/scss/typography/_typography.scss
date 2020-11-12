@@ -27,7 +27,7 @@ h2 {
   line-height: $lineHeight6;
   text-transform: capitalize;
   margin-top: 0;
-  margin-bottom: $bodyPadding2;
+  margin-bottom: $bodyPadding3;
 }
 
 h3 {
@@ -56,7 +56,7 @@ p {
 ul {
   padding-inline-start: 0;
   line-height: $lineHeight7;
-  margin-left: $bodyPadding6;
+  margin: 0 auto 0 $bodyPadding6;
 
   li {
     position: relative;

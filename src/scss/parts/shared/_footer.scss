@@ -39,6 +39,7 @@ footer {
     opacity: 0.62;
     text-align: left;
       
+    // general styles
     &.footer-block-one {
       padding: 0 0 $bodyPadding5 0;
 
@@ -57,7 +58,10 @@ footer {
     &.footer-block-three,
     &.footer-block-four
     {
+      padding-bottom: $bodyPadding5;
+      
       @include respond-to(tablet) {
+        padding-bottom: $bodyPadding1;
         flex: 1 1 33.33%;
       }
 
@@ -67,33 +71,41 @@ footer {
         padding-top: $bodyPadding7;
       }
     }
-  }
 
-  &.footer-block-one {
-    .torque-logo {
-      width: 213px;
-      height: auto;
-    }
-  }
-  &.footer-block-two {
-    padding-top: $bodyPadding7;
-  }
-  &.footer-block-three {
-    padding-top: $bodyPadding7;
-
-    .email-info {
-      .email-title {
-        display: none;
+    // specific styles
+    &.footer-block-one {
+      .torque-logo {
+        width: 213px;
+        height: auto;
       }
     }
+    &.footer-block-two {
+      padding-top: $bodyPadding7;
+    }
+    &.footer-block-three {
+      padding-top: $bodyPadding7;
 
-    .phone-info {
-      .phone-title {
-        display: none;
+      .email-info {
+        .email-title {
+          display: none;
+        }
+      }
+
+      .phone-info {
+        .phone-title {
+          display: none;
+        }
       }
     }
-  }
-  &.footer-block-four {
-    padding-top: $bodyPadding7;
+    &.footer-block-four {
+      padding-top: $bodyPadding7;
+
+      .hours-container {
+        .hours-title {
+          margin-bottom: $bodyPadding2;
+          text-transform: uppercase;
+        }
+      }
+    }
   }
 }

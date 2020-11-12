@@ -48,16 +48,29 @@
       flex-wrap: wrap;
       justify-content: space-between;
 
-      padding-top: $bodyPadding11;
-      padding-bottom: $bodyPadding11;
+      padding-top: $bodyPadding5;
+
+      @include respond-to(desktop) {
+        padding-top: $bodyPadding11;
+      }
   
       .loop-image {
   
         &.template-0 {
-          padding-bottom: 2%;
+          position: relative;
+          padding-bottom: 45%;
+          margin-bottom: 4%;
           flex: 1 1 100%;
     
           @include respond-to(tablet) {
+            padding-bottom: 40%;
+            margin-bottom: 3%;
+          }
+    
+          @include respond-to(desktop) {
+            padding-bottom: 40%;
+            margin-bottom: 2%;
+
             &:nth-child(4n + 1) {
               flex: 0 0 49%;
             }
@@ -70,7 +83,7 @@
             &:nth-child(4n + 4) {
               flex: 0 0 49%;
             }
-            &:nth-child(4n + 4) {
+            &:nth-child(4n + 5) {
               flex: 0 0 49%;
             }
           }
@@ -88,6 +101,8 @@
           min-width: 100%;
           object-fit: cover;
           vertical-align: bottom;
+
+          position: absolute;
         }
       }
     }

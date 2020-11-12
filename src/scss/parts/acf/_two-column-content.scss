@@ -7,20 +7,32 @@
 
   .two-column-wrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+
+    @include respond-to(desktop) {
+      flex-direction: row;
+    }
 
     @extend %titleAndContentMargins;
 
     .two-column-content-col-left {
       position: relative;
-      flex: 1 1 50%;
-      margin-left: $bodyPadding6;
+      margin-left: $bodyPadding3;
+
+      @include respond-to(desktop) {
+        margin-left: $bodyPadding6;
+        flex: 1 1 50%;
+      }
     }
     
     .two-column-content-col-right {
       position: relative;
-      flex: 1 1 50%;
-      margin-left: $bodyPadding6;
+      margin-left: $bodyPadding3;
+
+      @include respond-to(desktop) {
+        margin-left: $bodyPadding6;
+        flex: 1 1 50%;
+      }
     }
   }
 }

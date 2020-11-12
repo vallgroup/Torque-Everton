@@ -126,10 +126,6 @@ if ( have_rows( $modules ) ) :
       case 'contact_form' :
 
         // Contact Form
-        $title = strip_tags( get_sub_field( 'title' ), $allowable_title_tags );
-        $content = strip_tags( get_sub_field( 'content'), $allowable_content_tags );
-        $button = get_sub_field( 'cta' );
-
         include locate_template( $modules_path . 'contact-form.php' );
 
         break;

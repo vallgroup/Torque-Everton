@@ -110,7 +110,7 @@ $bg-img-height-tablet: 240px;
     @extend %imageSize;
 
     @include respond-to-max(tablet) {
-      padding-bottom: 65%;
+      padding-bottom: 60%;
     }
     
     @include respond-to(desktop) {

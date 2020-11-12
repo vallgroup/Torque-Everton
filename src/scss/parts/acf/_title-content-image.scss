@@ -7,9 +7,43 @@
   box-sizing: border-box;
   padding: $bodyPadding7 0;
 
+  @include respond-to(desktop) {
+    padding: $bodyPadding13 0;
+  }
+
+  // left-aligned
+  &.align-left {
+    .content-wrapper {
+      flex-direction: column;
+
+      @include respond-to(desktop) {
+        flex-direction: row;
+        margin-right: 0;
+      }
+
+      .title-content-image-col-right {
+        @include respond-to-max(desktop) {
+          margin-left: $bodyPadding6;
+        }
+      }
+    }
+  }
+
+  // right-aligned
   &.align-right {
     .content-wrapper {
-      flex-direction: row-reverse;
+      flex-direction: column;
+
+      @include respond-to(desktop) {
+        flex-direction: row-reverse;
+        margin-left: 0;
+      }
+
+      .title-content-image-col-right {
+        @include respond-to-max(desktop) {
+          margin-left: -$bodyPadding6;
+        }
+      }
     }
 
     .title-content-image-background {
@@ -21,36 +55,18 @@
     }
   }
 
-  .title-content-image-background {
-    position: absolute;
-    top: $bodyPadding7;
-    right: 0;
-    width: 45%;
-    height: calc(100% - #{$bodyPadding7});
-    
-    // background
-    // background-image: $bg-img;
-    // background-size: contain;
-    background-position: left top;
-    background-repeat: repeat;
-
-    background-image: linear-gradient($mediumGray 4px, transparent 4px), linear-gradient(90deg, $mediumGray 4px, transparent 4px);
-    background-size: $bodyPadding9 $bodyPadding9;
-
-    border-bottom: 4px solid $mediumGray;
-
-    opacity: 0.6;
-  }
-
+  // general styles
   .content-wrapper {
     display: flex;
-    flex-direction: row;
+    @extend %limitWidth;
 
-    @extend %limitWidthNarrow;
+    @include respond-to-max(desktop) {
+      width: calc(100% - (#{$bodyPadding6} + #{$bodyPadding6}));
+    }
 
     .title-content-image-col-left {
-      flex: 1 1 50%;
       display: flex;
+      flex: 1 1 40%;
       flex-direction: column;
       justify-content: center;
   
@@ -65,13 +81,52 @@
     
     .title-content-image-col-right {
       position: relative;
-      flex: 1 1 50%;
-  
+      flex: 1 1 60%;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      margin-top: $bodyPadding11;
+      margin-bottom: $bodyPadding11;
   
       @extend %imageSizeDouble;
+
+      @include respond-to(desktop) {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // background graphic
+  .title-content-image-background {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 70%;
+    height: 50%;
+    
+    // background
+    // background-image: $bg-img;
+    // background-size: contain;
+    background-position: left top;
+    background-repeat: repeat;
+
+    background-image: linear-gradient($mediumGray 4px, transparent 4px), linear-gradient(90deg, $mediumGray 4px, transparent 4px);
+    background-size: $bodyPadding9 $bodyPadding9;
+
+    border-bottom: 4px solid $mediumGray;
+
+    opacity: 0.6;
+
+    @include respond-to(tablet) {
+      height: 60%;
+    }
+
+    @include respond-to(desktop) {
+      top: 0;
+      bottom: unset;
+      width: 45%;
+      height: 100%;
     }
   }
 }
