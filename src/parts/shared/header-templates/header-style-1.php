@@ -54,9 +54,9 @@ $call_to_action = get_field( 'drawer_menu_cta', 'options' );
     ?>
     <?php // Contact Details ?>
     <div class="drawer-contact-container">
-      <?php get_template_part( 'parts/shared/address' ); ?>
-      <?php get_template_part( 'parts/shared/email' ); ?>
-      <?php get_template_part( 'parts/shared/phone' ); ?>
+      <?php get_template_part( 'parts/shared/contact-parts/address' ); ?>
+      <?php get_template_part( 'parts/shared/contact-parts/email' ); ?>
+      <?php get_template_part( 'parts/shared/contact-parts/phone' ); ?>
     </div>
     <div class="drawer-cta">
       <?php get_template_part( 'parts/elements/offset-hr' ); ?>

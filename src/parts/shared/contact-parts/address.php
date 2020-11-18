@@ -9,7 +9,7 @@ $address = get_field( 'address', 'options' )
 
 if ( $address ) { ?>
   <div class="location-info">
-    <a 
+    <a
       href="https://maps.google.com/?q=<?php echo urlencode( strip_tags( $address ) ); ?>" 
       target="_blank"
       rel="noopener noreferrer"

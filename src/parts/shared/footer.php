@@ -12,17 +12,17 @@
     </div>
 
     <div class="footer-block footer-block-two">
-      <?php get_template_part( 'parts/shared/address' ); ?>
+      <?php get_template_part( 'parts/shared/contact-parts/address' ); ?>
     </div>
 
     <div class="footer-block footer-block-three">
-      <?php get_template_part( 'parts/shared/phone' ); ?>
-      <?php get_template_part( 'parts/shared/email' ); ?>
+      <?php get_template_part( 'parts/shared/contact-parts/phone' ); ?>
+      <?php get_template_part( 'parts/shared/contact-parts/email' ); ?>
     </div>
     
     <div class="footer-block footer-block-four">
-      <?php get_template_part( 'parts/shared/hours' ); ?>
-      <?php get_template_part( 'parts/shared/socials' ); ?>
+      <?php get_template_part( 'parts/shared/contact-parts/hours' ); ?>
+      <?php get_template_part( 'parts/shared/contact-parts/socials' ); ?>
     </div>
   </div>
 

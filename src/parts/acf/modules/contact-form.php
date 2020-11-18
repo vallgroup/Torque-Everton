@@ -7,9 +7,9 @@
 <section class="tq-contact-form">
   <div class="contact-form-wrapper">
     <div class="contact-form-col-left">
-      <?php get_template_part( 'parts/shared/email' ); ?>
-      <?php get_template_part( 'parts/shared/phone' ); ?>
-      <?php get_template_part( 'parts/shared/address' ); ?>
+      <?php get_template_part( 'parts/shared/contact-parts/email' ); ?>
+      <?php get_template_part( 'parts/shared/contact-parts/phone' ); ?>
+      <?php get_template_part( 'parts/shared/contact-parts/address' ); ?>
     </div>
     
     <div class="contact-form-col-right">
