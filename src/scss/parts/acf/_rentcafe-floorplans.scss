@@ -40,7 +40,7 @@
       justify-content: center !important;
       padding: $bodyPadding7 0;
   
-      @include respond-to(tablet) {
+      @include respond-to(desktop) {
         flex-direction: row;
         justify-content: space-between !important;
       }
