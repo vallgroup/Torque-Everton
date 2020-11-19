@@ -67,36 +67,7 @@
           // .TitleContainer {}
     
           .DetailsContainer {
-  
             .DetailWrapper {
-              
-              &:before {
-                width: 25px;
-                height: 25px;
-                margin-right: 0.2em;
-              }
-  
-              &.Type {
-                &:before {
-                  content: 'type';
-                }
-              }
-              &.SF {
-                &:before {
-                  content: 'sf';
-                }
-              }
-              &.Price {
-                &:before {
-                  content: 'price';
-                }
-              }
-  
-              .DetailName {
-                width: 0;
-                overflow: hidden;
-              }
-    
               .DetailValue {
                 opacity: 0.6;
               }
