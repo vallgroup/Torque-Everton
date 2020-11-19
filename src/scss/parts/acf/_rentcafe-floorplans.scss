@@ -28,6 +28,9 @@
           .FilterButton {
             @include respond-to-max(desktop) {
               flex: 0 0 auto;
+              margin-right: 18px;
+            }
+            @include respond-to(desktop) {
               margin-right: 20px;
             }
           }
