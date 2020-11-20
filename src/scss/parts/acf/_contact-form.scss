@@ -43,6 +43,15 @@
       //   max-width: 265px;
       //   margin: 0 auto $bodyPadding6 0;
       // }
+
+      .form-message {
+        color: $success;
+        margin-bottom: $bodyPadding4;
+
+        &.error {
+          color: $error;
+        }
+      }
   
       form {
         .btn-primary {

@@ -4,14 +4,15 @@ require_once( get_stylesheet_directory() . '/includes/everton-child-nav-menus-cl
 require_once( get_stylesheet_directory() . '/includes/widgets/everton-child-widgets-class.php');
 require_once( get_stylesheet_directory() . '/includes/customizer/everton-child-customizer-class.php');
 require_once( get_stylesheet_directory() . '/includes/acf/everton-child-acf-class.php');
+require_once( get_stylesheet_directory() . '/includes/cpts/everton-child-lead-cpt-class.php');
 
 /**
  * Child Theme Nav Menus
  */
 
- if ( class_exists( 'Everton_Nav_Menus' ) ) {
-   new Everton_Nav_Menus();
- }
+if ( class_exists( 'Everton_Nav_Menus' ) ) {
+  new Everton_Nav_Menus();
+}
 
 /**
  * Child Theme Widgets
@@ -33,9 +34,17 @@ if ( class_exists( 'Everton_Customizer' ) ) {
  * Child Theme ACF
  */
 
- if ( class_exists( 'Everton_ACF' ) ) {
-   new Everton_ACF();
- }
+if ( class_exists( 'Everton_ACF' ) ) {
+  new Everton_ACF();
+}
+
+/**
+ * Child Theme Lead CPT
+ */
+
+if ( class_exists( 'Everton_Lead_CPT' ) ) {
+  new Everton_Lead_CPT();
+}
  
  
  /**
