@@ -90,7 +90,7 @@ if (
       <form class="contact-form" method="post" action="#contact-form" enctype="multipart/form-data">
         <?php echo wp_nonce_field( 'submit_contact_form' ); ?>
         <input type="hidden" name="tq_contact_form" />
-        <input type="text" name="first_name" placeholder="First Name*" maxlength="2" required />
+        <input type="text" name="first_name" placeholder="First Name*" maxlength="40" required />
         <input type="text" name="last_name" placeholder="Last Name*" maxlength="40" required />
         <input type="email" name="email" placeholder="Email*" maxlength="80" required />
         <input type="text" name="phone" placeholder="Phone*" maxlength="17" required />
