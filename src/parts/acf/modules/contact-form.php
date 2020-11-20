@@ -9,7 +9,7 @@ if (
 ) {
   // form was submitted
   try {
-    if ( Everton_Lead_CPT::validate_data_for_api( $_POST ) ) {
+    if ( ! Everton_Lead_CPT::validate_data_for_api( $_POST ) ) {
       throw new Exception('Please ensure all required fields are filled and the data is entered correctly.');
     }
 
