@@ -92,10 +92,10 @@
           }
         }
       }
+    }
 
-      .SiteMapImage {
-        top: $bodyPadding7;
-      }
+    .SiteMapImageAnchor {
+      padding: $bodyPadding7 0;
     }
   }
 }
