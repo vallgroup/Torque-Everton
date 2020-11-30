@@ -8,7 +8,7 @@
   padding: $bodyPadding7 0;
 
   @include respond-to(desktop) {
-    padding: $bodyPadding13 0;
+    padding: 0 0 $bodyPadding7;
   }
 
   // left-aligned
@@ -87,10 +87,11 @@
       background-repeat: no-repeat;
       margin-top: $bodyPadding11;
       margin-bottom: $bodyPadding11;
-  
+      
       @extend %imageSizeDouble;
-
+      
       @include respond-to(desktop) {
+        background-size: auto 500px;
         margin-top: 0;
         margin-bottom: 0;
       }

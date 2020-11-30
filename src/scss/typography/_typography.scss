@@ -1,4 +1,4 @@
-@import "fonts";
+@import "./fonts";
 @import "../partials/variables";
 
 body {
@@ -55,12 +55,14 @@ p {
 
 ul {
   padding-inline-start: 0;
-  line-height: $lineHeight7;
   margin: 0 auto 0 $bodyPadding6;
 
   li {
     position: relative;
     list-style: none;
+    letter-spacing: $letterSpacing6;
+    line-height: $lineHeight3;
+    margin-bottom: 16px;
 
     &:before {
       content: " ";
@@ -69,7 +71,7 @@ ul {
       height: 3px;
       background-color: $khaki;
       left: -2.2em;
-      top: 1em;
+      top: 7.5px;
     }
   }
 }

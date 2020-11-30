@@ -120,7 +120,10 @@
   margin-left: 0;
   margin-right: 0;
 
-  // @include respond-to(tablet) {}
+  @include respond-to(tablet) {
+    margin-left: 15%;
+    margin-right: 12%;
+  }
 
   @include respond-to(desktop) {
     margin-left: 15%;

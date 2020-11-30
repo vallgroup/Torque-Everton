@@ -117,6 +117,7 @@ if ( have_rows( $modules ) ) :
       case 'iframe' :
 
         // iFrame
+        $title = get_sub_field( 'title' );
         $url = get_sub_field( 'url' );
 
         include locate_template( $modules_path . 'iframe.php' );

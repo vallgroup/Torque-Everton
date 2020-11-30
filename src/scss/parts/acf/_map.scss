@@ -7,6 +7,10 @@
 
   .content-wrapper {
     @extend %limitWidthNarrow;
+
+    .torque-map-dynamic-infowindow {
+      color: $lightGray;
+    }
   }
   
 }

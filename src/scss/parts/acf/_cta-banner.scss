@@ -53,22 +53,18 @@ $bg-img-height-tablet: 240px;
       }
 
       @include respond-to(desktop) {
-        bottom: 5%;
-        left: unset;
-        right: -5.5em;
-        transform: rotate(-90deg);
+        transform: rotate(-90deg) translateX(-50%);
+        transform-origin: left;
+        width: 100%;
+        max-width: 420px;
+        left: calc(100% - 10%);
+        bottom: 45%;
       }
     }
 
     .cta-banner-button {
       top: unset;
       bottom: -35px;
-      // left: 16%;
-      // right: unset;
-    
-      // @include respond-to(tablet) {
-      //   left: 18%;
-      // }
 
       @include respond-to(desktop) {
         right: 20%;
@@ -117,11 +113,15 @@ $bg-img-height-tablet: 240px;
       flex: 1 1 80%;
       border-top: 0;
       border-left: 3px solid $khaki;
+      padding-bottom: 42%;
     }
 
     img {
+      position: absolute;
+      object-fit: cover;
+      object-position: center;
       width: 100%;
-      height: auto;
+      height: 100%;
     }
 
     &.contain-image {
@@ -162,12 +162,14 @@ $bg-img-height-tablet: 240px;
     position: absolute;
     top: calc(#{$bg-img-height-mobile} / 2);
     bottom: unset;
-    left: 16%;
+    left: $bodyPadding3;
     transform: translateY(-50%);
+    max-width: calc(100% - #{$bodyPadding5});
     
     @include respond-to(tablet) {
       left: 18%;
       top: calc(#{$bg-img-height-tablet} / 2);
+      max-width: calc(100% - 36%);
     }
 
     @include respond-to(desktop) {
@@ -186,7 +188,7 @@ $bg-img-height-tablet: 240px;
     position: absolute;
     top: calc(#{$bg-img-height-mobile} - 35px);
     bottom: unset;
-    left: 16%;
+    left: $bodyPadding4;
     right: unset;
     
     @include respond-to(tablet) {

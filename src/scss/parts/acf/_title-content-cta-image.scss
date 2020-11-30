@@ -41,10 +41,13 @@
     justify-content: center;
     flex-wrap: wrap;
     
+    margin-top: $bodyPadding7;
+    
     @include respond-to(tablet) {}
     
     @include respond-to(desktop) {
       flex: 1 1 40%;
+      margin-top: 0;
     }
 
     .title-content-cta-image-title {
