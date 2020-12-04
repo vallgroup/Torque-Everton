@@ -110,10 +110,22 @@
   width: 100%;
   height: auto;
   transform: translateY(-50%);
+}
 
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+%iframeSize {
+  position: relative;
+  padding-bottom: 56.25%;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+}
+
+%iframeInner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 %contentWithAdjacentImageMargins {

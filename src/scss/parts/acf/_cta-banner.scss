@@ -1,5 +1,4 @@
-$bg-img-mobile: url('../assets/images/background-graphic-e.png');
-$bg-img-desktop: url('../assets/images/background-graphic-e.png');
+$bg-img: url('../assets/images/background-graphic-e.png');
 $bg-img-height-mobile: 170px;
 $bg-img-height-tablet: 240px;
 
@@ -83,19 +82,22 @@ $bg-img-height-tablet: 240px;
 
   // Left-aligned content, right image
   .cta-banner-col-left {
-    background-image: $bg-img-mobile;
-    background-position: right bottom;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: $bg-img;
+    background-position: left bottom;
+    background-size: 35% auto;
+    background-repeat: repeat;
     min-height: $bg-img-height-mobile;
     
     @include respond-to(tablet) {
       min-height: $bg-img-height-tablet;
+      background-size: 25% auto;
     }
 
     @include respond-to(desktop) {
       flex: 1 1 20%;
-      background-image: $bg-img-desktop;
+      background-position: right bottom;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
   }
   

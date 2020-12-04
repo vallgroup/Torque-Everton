@@ -408,10 +408,9 @@ class Everton_ACF {
             'choices' => array(
               'image' => 'Image',
               'video' => 'Video',
+              'video_link' => 'Video Link',
             ),
-            'default_value' => array(
-              0 => 'image',
-            ),
+            'default_value' => 'image',
             'allow_null' => 0,
             'multiple' => 0,
             'ui' => 1,
@@ -450,6 +449,30 @@ class Everton_ACF {
             'max_height' => '',
             'max_size' => 50,
             'mime_types' => 'mp4',
+          ),
+          array(
+            'key' => 'field_5fc9b9445cff2',
+            'label' => 'Video Link',
+            'name' => 'video_link',
+            'type' => 'url',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => array(
+              array(
+                array(
+                  'field' => 'field_5f9746d6db1bd',
+                  'operator' => '==',
+                  'value' => 'video_link',
+                ),
+              ),
+            ),
+            'wrapper' => array(
+              'width' => '',
+              'class' => '',
+              'id' => '',
+            ),
+            'default_value' => '',
+            'placeholder' => 'https://player.vimeo.com/video/486436210',
           ),
         ),
         'location' => array(

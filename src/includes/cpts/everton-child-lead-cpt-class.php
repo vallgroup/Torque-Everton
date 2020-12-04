@@ -57,7 +57,7 @@ class Everton_Lead_CPT {
 		// TODO: use these?
 		$vendor_propert_id = 'somevendorID';
 		// OR these?
-		$property_code = 'p0150955';
+		$property_code = 'p0150955'; // TODO: get just the first property code from the options page, if multiple exist...
 		$username = 'livercqa7s@yardi.com';
 		$password = 'password';
 
