@@ -53,6 +53,11 @@ footer {
         flex: 1 1 31%;
         text-align: center;
       }
+
+      // lgoo
+      & > a > div {
+        display: inline-block;
+      }
     }
     &.footer-block-two,
     &.footer-block-three,
