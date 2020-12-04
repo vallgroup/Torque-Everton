@@ -1,102 +1,109 @@
 .tq-title-content-cta-image {
-  position: relative;
-  box-sizing: border-box;
-  display: flex;
-
-  @extend %limitWidth;
+  max-width: 1500px;
+  margin: 0 auto;
 
   // left-aligned
   &.align-left {
-    flex-direction: column-reverse;
-    
-    @include respond-to(desktop) {
-      flex-direction: row;
-      margin-right: 0;
+    .content-container {
+      flex-direction: column-reverse;
+      
+      @include respond-to(desktop) {
+        flex-direction: row;
+        margin-right: 0;
+      }
     }
   }
 
   // right-aligned
   &.align-right {
-    flex-direction: column-reverse;
+    .content-container {
+      flex-direction: column-reverse;
 
-    @include respond-to(desktop) {
-      flex-direction: row-reverse;
-      margin-left: 0;
+      @include respond-to(desktop) {
+        flex-direction: row-reverse;
+        margin-left: 0;
+      }
     }
   }
 
   // general col/row styles
-  & > div {
-    margin-top: $bodyPadding4;
-    
-    @include respond-to(desktop) {
-      margin-top: 0;
-    }
-  }
-
-  .title-content-cta-image-col-left {
-    flex: 1 1 100%;
+  .content-container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
-    
-    margin-top: $bodyPadding7;
-    
-    @include respond-to(tablet) {}
-    
-    @include respond-to(desktop) {
-      flex: 1 1 40%;
-      margin-top: 0;
-    }
 
-    .title-content-cta-image-title {
-      @extend %contentWithAdjacentImageMargins;
-    }
+    @extend %limitWidth;
 
-    .title-content-cta-image-content {
-      @extend %contentWithAdjacentImageMargins;
-    }
-
-    .title-content-cta-image-button {
-      position: relative;
+    & > div {
       margin-top: $bodyPadding4;
+      
+      @include respond-to(desktop) {
+        margin-top: 0;
+      }
+    }
+  
+    .title-content-cta-image-col-left {
+      flex: 1 1 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: flex-start;
+      flex-wrap: wrap;
+      
+      margin-top: $bodyPadding7;
+      
+      @include respond-to(tablet) {}
       
       @include respond-to(desktop) {
-        margin-top: $bodyPadding8;
+        flex: 1 1 40%;
+        margin-top: 0;
       }
-
-      .offset-hr {
-        @include respond-to-max(desktop) {
-          display: none;
-        }
-      }
-
-      .btn-primary {
+  
+      .title-content-cta-image-title {
         @extend %contentWithAdjacentImageMargins;
       }
-    }
-  }
   
-  .title-content-cta-image-col-right {
-    position: relative;
-    flex: 1 1 100%;
-    flex-wrap: wrap;
+      .title-content-cta-image-content {
+        @extend %contentWithAdjacentImageMargins;
+      }
+  
+      .title-content-cta-image-button {
+        position: relative;
+        margin-top: $bodyPadding4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        
+        @include respond-to(desktop) {
+          margin-top: $bodyPadding8;
+        }
+  
+        .offset-hr {
+          @include respond-to-max(desktop) {
+            display: none;
+          }
+        }
+  
+        .btn-primary {
+          @extend %contentWithAdjacentImageMargins;
+        }
+      }
+    }
     
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    
-    @extend %imageSize;
-    
-    @include respond-to(tablet) {}
-    
-    @include respond-to(desktop) {
-      flex: 1 1 60%;
+    .title-content-cta-image-col-right {
+      position: relative;
+      flex: 1 1 100%;
+      flex-wrap: wrap;
+      
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      
+      @extend %imageSize;
+      
+      @include respond-to(tablet) {}
+      
+      @include respond-to(desktop) {
+        flex: 1 1 60%;
+      }
     }
   }
 }

@@ -53,6 +53,7 @@ if ( have_rows( $modules ) ) :
         $alignment = get_sub_field( 'alignment' );
         $contain_image = get_sub_field( 'contain_image' );
         $offset_image = get_sub_field( 'offset_image' );
+        $include_e_graphic = get_sub_field( 'include_e_graphic' );
         $title = strip_tags( get_sub_field( 'title' ), $allowable_title_tags );
         $image = get_sub_field( 'image' );
         $button = get_sub_field( 'button' );

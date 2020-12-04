@@ -9,6 +9,14 @@
 */
 
 @font-face {
+  font-family: "Cochin-Bold";
+  src: url('../assets/fonts/cochin-bold/cochin-bold.ttf')
+    format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Akkurat";
   src: url('../assets/fonts/akkurat/Akkurat.ttf')
     format('truetype');

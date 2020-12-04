@@ -338,7 +338,7 @@ class Everton_ACF {
         'label_placement' => 'top',
         'instruction_placement' => 'label',
         'hide_on_screen' => '',
-        'active' => 1,
+        'active' => true,
         'description' => '',
       ));
       
@@ -467,7 +467,7 @@ class Everton_ACF {
         'label_placement' => 'top',
         'instruction_placement' => 'label',
         'hide_on_screen' => '',
-        'active' => 1,
+        'active' => true,
         'description' => '',
       ));
       
@@ -898,7 +898,7 @@ class Everton_ACF {
                     'required' => 0,
                     'conditional_logic' => 0,
                     'wrapper' => array(
-                      'width' => '33.33',
+                      'width' => '30',
                       'class' => '',
                       'id' => '',
                     ),
@@ -906,9 +906,7 @@ class Everton_ACF {
                       'left' => 'Content left, image right',
                       'right' => 'Content right, image left',
                     ),
-                    'default_value' => array(
-                      0 => 'left',
-                    ),
+                    'default_value' => 'left',
                     'allow_null' => 0,
                     'multiple' => 0,
                     'ui' => 1,
@@ -925,7 +923,7 @@ class Everton_ACF {
                     'required' => 0,
                     'conditional_logic' => 0,
                     'wrapper' => array(
-                      'width' => '33.33',
+                      'width' => '30',
                       'class' => '',
                       'id' => '',
                     ),
@@ -952,7 +950,34 @@ class Everton_ACF {
                       ),
                     ),
                     'wrapper' => array(
-                      'width' => '33.33',
+                      'width' => '20',
+                      'class' => '',
+                      'id' => '',
+                    ),
+                    'message' => '',
+                    'default_value' => 0,
+                    'ui' => 1,
+                    'ui_on_text' => '',
+                    'ui_off_text' => '',
+                  ),
+                  array(
+                    'key' => 'field_5fc5a32e7e2a4',
+                    'label' => 'Include \'E\' Graphic?',
+                    'name' => 'include_e_graphic',
+                    'type' => 'true_false',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => array(
+                      array(
+                        array(
+                          'field' => 'field_5f5feb738c018',
+                          'operator' => '==',
+                          'value' => 'left',
+                        ),
+                      ),
+                    ),
+                    'wrapper' => array(
+                      'width' => '20',
                       'class' => '',
                       'id' => '',
                     ),
@@ -1316,12 +1341,12 @@ class Everton_ACF {
         'label_placement' => 'top',
         'instruction_placement' => 'label',
         'hide_on_screen' => '',
-        'active' => 1,
+        'active' => true,
         'description' => '',
       ));
       
       endif;
-
+    
     // acf definitions - end
   }
 }

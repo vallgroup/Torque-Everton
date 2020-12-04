@@ -116,7 +116,7 @@ $bg-img-height-tablet: 240px;
       padding-bottom: 42%;
     }
 
-    img {
+    img.background {
       position: absolute;
       object-fit: cover;
       object-position: center;
@@ -124,10 +124,34 @@ $bg-img-height-tablet: 240px;
       height: 100%;
     }
 
+    img.e-graphic {
+      position: absolute;
+      bottom: $bodyPadding3;
+      right: $bodyPadding3;
+      object-fit: cover;
+      object-position: center;
+      width: 90px;
+      height: 102px;
+
+      @include respond-to(tablet) {
+        bottom: $bodyPadding4;
+        right: $bodyPadding6;
+        width: 184px;
+        height: 208px;
+      }
+
+      @include respond-to(desktop) {
+        bottom: $bodyPadding7;
+        right: $bodyPadding7;
+        width: 277px;
+        height: 312px;
+      }
+    }
+
     &.contain-image {
       overflow: visible;
 
-      img {
+      img.background {
         position: absolute;
         left: 0;
         right: 0;

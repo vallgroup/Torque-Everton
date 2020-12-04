@@ -1,6 +1,6 @@
 <?php
 /**
- * Template file for displaying a Filtered Gallery
+ * Template file for displaying a Filtered Gallery (with captions)
  */
 
 // options

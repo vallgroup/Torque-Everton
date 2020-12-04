@@ -19,7 +19,17 @@ $image_offset_class = $offset_image ? 'offset-image' : '';
     <?php echo $image_cover_class; ?>
     <?php echo $image_offset_class; ?>
   ">
-    <img src="<?php echo $bg_image_url; ?>" />
+    <img class="background" src="<?php echo $bg_image_url; ?>" />
+
+    <?php if ( 
+      $include_e_graphic
+      && 'left' === $alignment
+    ) {
+      $e_graphic_image_url = get_stylesheet_directory_uri() . '/assets/images/white-graphic-e.png'; 
+    ?>
+      <img class="e-graphic" src="<?php echo $e_graphic_image_url; ?>" />
+    <?php } ?>
+
   </div>
 
   <?php if ( $title ) { ?>
