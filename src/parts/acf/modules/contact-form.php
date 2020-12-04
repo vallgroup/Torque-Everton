@@ -100,7 +100,9 @@ if (
         <input type="text" name="state" placeholder="State*" maxlength="4" required />
         <input type="text" name="zip_code" placeholder="Zip Code*" maxlength="12" required />
         <textarea name="message" placeholder="Message" rows="6" maxlength="255"></textarea>
-        <?php // echo do_shortcode('[torque_recaptcha]'); ?>
+        <?php if ( shortcode_exists( 'torque_recaptcha' ) ) {
+          echo do_shortcode('[torque_recaptcha]');
+        } ?>
         <input class="btn-primary wide" type="submit" />
       </form>
     </div>
