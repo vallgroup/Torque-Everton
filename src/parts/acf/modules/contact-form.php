@@ -89,21 +89,88 @@ if (
 
       <form class="contact-form" method="post" action="#contact-form" enctype="multipart/form-data">
         <?php echo wp_nonce_field( 'submit_contact_form' ); ?>
-        <input type="hidden" name="tq_contact_form" />
-        <input type="text" name="first_name" placeholder="First Name*" maxlength="40" required />
-        <input type="text" name="last_name" placeholder="Last Name*" maxlength="40" required />
-        <input type="email" name="email" placeholder="Email*" maxlength="80" required />
-        <input type="text" name="phone" placeholder="Phone*" maxlength="17" required />
-        <input type="text" name="address_1" placeholder="Address 1*" maxlength="40" required />
-        <input type="text" name="address_2" placeholder="Address 2" maxlength="40" />
-        <input type="text" name="city" placeholder="City*" maxlength="40" required />
-        <input type="text" name="state" placeholder="State*" maxlength="4" required />
-        <input type="text" name="zip_code" placeholder="Zip Code*" maxlength="12" required />
-        <textarea name="message" placeholder="Message" rows="6" maxlength="255"></textarea>
+        <input 
+          type="hidden" 
+          name="tq_contact_form" />
+        <input 
+          type="text" 
+          name="first_name" 
+          value="<?php echo isset( $_POST['first_name'] ) ? $_POST['first_name'] : ''; ?>"
+          placeholder="First Name*" 
+          maxlength="40" 
+          required
+        />
+        <input 
+          type="text" 
+          name="last_name" 
+          value="<?php echo isset( $_POST['last_name'] ) ? $_POST['last_name'] : ''; ?>"
+          placeholder="Last Name*" 
+          maxlength="40" 
+          required 
+        />
+        <input 
+          type="email" 
+          name="email" 
+          value="<?php echo isset( $_POST['email'] ) ? $_POST['email'] : ''; ?>"
+          placeholder="Email*" 
+          maxlength="80" 
+          required
+        />
+        <input 
+          type="text" 
+          name="phone" 
+          value="<?php echo isset( $_POST['phone'] ) ? $_POST['phone'] : ''; ?>"
+          placeholder="Phone*" 
+          maxlength="17" 
+          required
+        />
+        <input 
+          type="text" 
+          name="address_1" 
+          value="<?php echo isset( $_POST['address_1'] ) ? $_POST['address_1'] : ''; ?>"
+          placeholder="Address 1*" 
+          maxlength="40" 
+          required
+        />
+        <input 
+          type="text" 
+          name="address_2" 
+          value="<?php echo isset( $_POST['address_2'] ) ? $_POST['address_2'] : ''; ?>"
+          placeholder="Address 2" 
+          maxlength="40" />
+        <input 
+          type="text" 
+          name="city" 
+          value="<?php echo isset( $_POST['city'] ) ? $_POST['city'] : ''; ?>"
+          placeholder="City*" 
+          maxlength="40" 
+          required
+        />
+        <input 
+          type="text" 
+          name="state" 
+          value="<?php echo isset( $_POST['state'] ) ? $_POST['state'] : ''; ?>"
+          placeholder="State*" 
+          maxlength="4" 
+          required
+        />
+        <input 
+          type="text" 
+          name="zip_code" 
+          value="<?php echo isset( $_POST['zip_code'] ) ? $_POST['zip_code'] : ''; ?>"
+          placeholder="Zip Code*" 
+          maxlength="12" 
+          required
+        />
+        <textarea
+          name="message" 
+          placeholder="Message" rows="6" 
+          maxlength="255"
+        ><?php echo isset( $_POST['message'] ) ? $_POST['message'] : ''; ?></textarea>
         <?php if ( shortcode_exists( 'torque_recaptcha' ) ) {
           echo do_shortcode('[torque_recaptcha]');
         } ?>
-        <input class="btn-primary wide" type="submit" />
+        <button class="btn-primary wide" type="submit">Submit</button>
       </form>
     </div>
   </div>

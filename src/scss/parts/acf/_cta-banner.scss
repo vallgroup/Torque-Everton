@@ -1,4 +1,4 @@
-$bg-img: url('../assets/images/background-graphic-e.png');
+$bg-img: url('../statics/images/background-graphic-e.png');
 $bg-img-height-mobile: 170px;
 $bg-img-height-tablet: 240px;
 
@@ -55,7 +55,7 @@ $bg-img-height-tablet: 240px;
         transform: rotate(-90deg) translateX(-50%);
         transform-origin: left;
         width: 100%;
-        max-width: 420px;
+        max-width: 450px;
         left: calc(100% - 10%);
         bottom: 45%;
       }

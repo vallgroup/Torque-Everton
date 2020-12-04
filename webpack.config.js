@@ -78,7 +78,6 @@ const config = {
       { from: path.join(srcDir, "screenshot.png"), to: buildDir },
       { from: path.join(srcDir, "**/*.php"), to: buildDir },
       { from: path.join(srcDir, "libraries/**/*"), to: buildDir },
-      { from: path.join(srcDir, "assets/**/*"), to: buildDir },
     ])
   ],
 
