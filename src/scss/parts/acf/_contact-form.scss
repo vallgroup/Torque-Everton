@@ -37,13 +37,11 @@
     .contact-form-col-right {
       position: relative;
       flex: 1 1 60%;
-      // box-sizing: border-box;
-      // padding: 0 $bodyPadding7 0 0;
-  
-      // .contact-form-content {
-      //   max-width: 265px;
-      //   margin: 0 auto $bodyPadding6 0;
-      // }
+      
+      .contact-form {
+        display: flex;
+        flex-wrap: wrap;
+      }
 
       .form-message {
         color: $success;
