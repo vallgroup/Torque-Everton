@@ -57,13 +57,14 @@ class Everton_Lead_CPT {
 		// TODO: use these?
 		$vendor_propert_id = 'somevendorID';
 		// OR these?
-		$property_code = 'p0150955'; // TODO: get just the first property code from the options page, if multiple exist...
-		$username = 'livercqa7s@yardi.com';
-		$password = 'password';
+		$property_code = get_field( 'property_codes', 'options' ) && isset( get_field( 'property_codes', 'options' )[0]['property_code'] )
+			? trim( get_field( 'property_codes', 'options' )[0]['property_code'] )
+			: null;
+		$username = 'efapi@atlanticresi.com';
+		$password = 'atlantic1190';
 
-		// TODO: check other fields (see above) if necessary
 		// if we have a key, continue, otherwise exit with response
-		if ( $api_key ) {
+		if ( $api_key && $property_code) {
 			// lead data
 			$first_name = isset( $lead_data['first_name'] )
 				? self::prep_data_for_api( $lead_data['first_name'] )
