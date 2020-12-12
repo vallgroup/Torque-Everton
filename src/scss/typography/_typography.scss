@@ -85,9 +85,13 @@ i {
 
 form {
   input:not([type="submit"]),
-  textarea
+  select
   {
     @extend %useFormInput;
+  }
+
+  textarea {
+    @extend %useFormTextArea;
   }
 
   input[type="submit"] {

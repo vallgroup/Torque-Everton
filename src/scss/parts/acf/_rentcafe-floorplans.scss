@@ -11,6 +11,9 @@
     .FiltersContainer {
       .FilterContainer {
         .FilterTitle {
+          font-size: 1em;
+          font-family: $fontFamilyHeading1;
+
           @include respond-to-max(tablet) {
             padding: 0;
           }

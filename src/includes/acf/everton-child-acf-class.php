@@ -399,7 +399,15 @@ class Everton_ACF {
             'type' => 'select',
             'instructions' => 'If image, set Featured Image, else choose video below.',
             'required' => 0,
-            'conditional_logic' => 0,
+            'conditional_logic' => array(
+              array(
+                array(
+                  'field' => 'field_5f5d8208da691',
+                  'operator' => '==',
+                  'value' => '1',
+                ),
+              ),
+            ),
             'wrapper' => array(
               'width' => '33.33',
               'class' => '',
@@ -1197,6 +1205,33 @@ class Everton_ACF {
                       'id' => '',
                     ),
                     'message' => 'This will output the Rentcafe floorplans based on the configuration found in the Options page.',
+                    'new_lines' => 'wpautop',
+                    'esc_html' => 0,
+                  ),
+                ),
+                'min' => '',
+                'max' => '',
+              ),
+              'layout_5fd4066c9547e' => array(
+                'key' => 'layout_5fd4066c9547e',
+                'name' => 'rentcafe_tour',
+                'label' => 'Rentcafe Schedule a Tour Form',
+                'display' => 'block',
+                'sub_fields' => array(
+                  array(
+                    'key' => 'field_5fd406940292b',
+                    'label' => 'Message',
+                    'name' => '',
+                    'type' => 'message',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                      'width' => '',
+                      'class' => '',
+                      'id' => '',
+                    ),
+                    'message' => 'This will output the Rentcafe \'Schedule a Tour\' form.',
                     'new_lines' => 'wpautop',
                     'esc_html' => 0,
                   ),

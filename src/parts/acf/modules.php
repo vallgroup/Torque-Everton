@@ -148,6 +148,13 @@ if ( have_rows( $modules ) ) :
 
         break;
 
+      case 'rentcafe_tour' :
+
+        // Rentcafe Schedule Tour
+        include locate_template( $modules_path . 'rentcafe-tour.php' );
+
+        break;
+
     }
 
   endwhile;
