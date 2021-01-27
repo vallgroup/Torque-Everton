@@ -203,7 +203,9 @@
   -webkit-appearance: none;
   outline: none;
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     color: $darkGray;
     background-color: $khaki;
   }
