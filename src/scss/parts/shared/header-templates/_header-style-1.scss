@@ -55,6 +55,23 @@ header#header-style-1 {
           &:not(:first-child) {
             margin-left: $bodyPadding5;
           }
+          &:last-child {
+            a {
+              color: $khaki;
+
+              &:hover {
+                color: $white;
+              }
+            }
+          } 
+
+          a {
+            transition: color 250ms;
+
+            &:hover {
+              color: $khaki;
+            }
+          }
         }
       }
       
@@ -161,9 +178,14 @@ header#header-style-1 {
           color: $white;
           letter-spacing: $letterSpacing3;
           line-height: $lineHeight2;
+          transition: color 250ms;
           
           // @include respond-to(tablet) {}
           // @include respond-to(desktop) {}
+
+          &:hover {
+            color: $khaki;
+          }
         }
       }
     }

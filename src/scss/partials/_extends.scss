@@ -198,13 +198,14 @@
   cursor: pointer;
   letter-spacing: 1.3px;
   line-height: 19px;
-  transition: 0.2s;
+  transition: 0.25s;
 
   -webkit-appearance: none;
   outline: none;
 
   &:hover {
-    background-color: $darkGray;
+    color: $darkGray;
+    background-color: $khaki;
   }
 
   &:disabled {
@@ -296,7 +297,8 @@
   -webkit-appearance: none;
   outline: none;
 
-  &::placeholder {
+  &::placeholder,
+  &:invalid {
     color: $white45pc;
   }
 

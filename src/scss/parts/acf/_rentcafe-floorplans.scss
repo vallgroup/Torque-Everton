@@ -29,6 +29,7 @@
           }
 
           .FilterButton {
+            font-family: $fontFamilyHeading2;
             @include respond-to-max(desktop) {
               flex: 0 0 auto;
               margin-right: 18px;
