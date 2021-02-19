@@ -186,7 +186,7 @@
 %useButton_Setup {
   position: relative;
   display: inline-block;
-  padding: 10px 15px;
+  padding: 12px 15px 8px;
   border: $borderThick solid $khaki;
   border-radius: 0;
   background-color: $darkGray;
@@ -218,7 +218,7 @@
   // @include respond-to(tablet) {}
   
   @include respond-to(desktop) {
-    padding: 20px 30px;
+    padding: 22px 30px 18px;
   }
 }
 // regular btn
