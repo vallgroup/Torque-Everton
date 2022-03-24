@@ -45,41 +45,41 @@ if ( class_exists( 'Everton_ACF' ) ) {
 if ( class_exists( 'Everton_Lead_CPT' ) ) {
   new Everton_Lead_CPT();
 }
- 
- 
+
+
  /**
   * Map plugin settings
   */
- 
+
  add_filter( 'torque_map_api_key', function( $n ) {
    return get_field( 'google_maps_api_key', 'options' )
      ? get_field( 'google_maps_api_key', 'options' )
      : '';
  } );
- 
+
  add_filter( 'torque_map_pois_allowed', function( $n ) {
    return 0;
  } );
- 
+
  // add_filter( 'torque_map_manual_pois', function( $n ) {
  //   return true;
  // } );
- 
+
 //  add_filter( 'torque_map_pois_location', function( $n ) {
 //    return 'middle';
 //  } );
- 
+
 //  add_filter( 'torque_map_display_pois_list', function( $n ) {
 //    return true;
 //  } );
- 
- 
+
+
  /**
   * Jetpack filters, for local/staging use
   */
  // Hook into Jetpack's form redirect filter when WP loads, without instantiating the entire class
 //  Torque_Jetpack_Form::register_redirect_filter();
- 
+
  // add_filter( 'jetpack_development_mode', '__return_true' );
 //  add_filter( 'jetpack_is_staging_site', '__return_true' );
 
@@ -137,7 +137,7 @@ function torque_enqueue_child_scripts() {
   // enqueue child scripts
   wp_enqueue_script( 'everton-child-script',
       get_stylesheet_directory_uri() . '/bundles/bundle.js',
-      array( 
+      array(
         'torque-theme-scripts',
         'jquery'
       ), // depends on parent script & jQuery
@@ -163,7 +163,7 @@ function torque_head_google_analytics() { ?>
 add_action( 'wp_footer', 'torque_head_rentcafe_crm' );
 function torque_head_rentcafe_crm() { ?>
   <!-- Rentcafe CRM -->
-  <script src="https://textus.rentcafe.com/js/TextUsWidget.js" id="myScript" DNIS="8339332015" ></script>
+  <script src="https://popcard.rentcafe.com/js/textuswidget.js" id="myScript" DNIS="8339332015" ></script>
 <?php }
 
 // add Rentcafe CRM script to <head> tag
@@ -173,7 +173,7 @@ function torque_popup() {
     $_title = get_field( 'popup_title', 'options' );
     $_content = get_field( 'popup_content', 'options' );
     $_output = '';
-  
+
     if ( $_title && $_content ) {
       $_cta = get_field( 'popup_cta', 'options' );
       $_image_url = get_stylesheet_directory_uri() . '/statics/images/popup-banner.jpg';
@@ -188,7 +188,7 @@ function torque_popup() {
           $_output .= '<h2 class="popup-title">' . $_title . '</h2>';
           $_output .= '<div class="popup-divider"></div>';
           $_output .= '<div class="popup-content">' . $_content . '</div>';
-          $_output .= $_cta 
+          $_output .= $_cta
             ? '<a class="popup-cta btn-primary" href="' . $_cta['url'] . '" target="' . $_cta['target'] . '">' . $_cta['title'] . '</a>'
             : '';
         // close content container
